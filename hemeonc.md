@@ -55,8 +55,8 @@ Can be positive for penicillium and endemic fungi infections.
 Use of fungal prophylaxis attenuates usefulness of test. 
 Bronchoalveolar lavage GM may increase yield over cultures alone.
 
-## $\beta$ Glucan
-As sensitive but not specific for aspergillus as many fungi release $\beta$ glucan including candida, fusarium, trichosporon and pneumocystis. 
+## \beta Glucan
+As sensitive but not specific for aspergillus as many fungi release \beta glucan including candida, fusarium, trichosporon and pneumocystis. 
 
 # Post-Transplant Lymphoproliferative Disorder
 

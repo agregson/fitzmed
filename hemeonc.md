@@ -69,4 +69,11 @@ Risk factors include:
 
 Increasing number of risk factors increases risk. Most likely to see 6--12 months post-transplant. 
 
+# Fungal Prophylaxis
+
+## Allogeneic Bone Marrow Transplants
+Includes stem cell, cord/double cord transplants. [@Winston2011]
+Initiate posaconazole 400mg PO BID from day 1 to day 100 post-transplant (day +1--+100) or until off of prednisone for GVHD prophylaxis.
+Ensure take with acidic drink.
+
 # References

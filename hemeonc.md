@@ -77,7 +77,7 @@ Initiate posaconazole 400mg PO BID from day 1 to day 100 post-transplant (day +1
 Ensure take with acidic drink.
 
 # Lung Transplant Pre-Transplant Screening for Infectious Risk
-Some taken during reading of [@Luong2010], need to review [@Fischer2009] for more, plus add the NTM stuff.
+Some taken during reading of [@Luong2010a], need to review [@Fischer2009] for more, plus add the NTM stuff.
 For now looks like the American Journal of Transplantation December 2009 Supplement 4 is all about screening. 
 
 ## Pseudomonas

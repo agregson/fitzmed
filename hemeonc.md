@@ -76,4 +76,29 @@ Includes stem cell, cord/double cord transplants. [@Winston2011]
 Initiate posaconazole 400mg PO BID from day 1 to day 100 post-transplant (day +1--+100) or until off of prednisone for GVHD prophylaxis.
 Ensure take with acidic drink.
 
+# Lung Transplant Pre-Transplant Screening for Infectious Risk
+Some taken during reading of [@Luong2010], need to review [@Fischer2009] for more, plus add the NTM stuff.
+For now looks like the American Journal of Transplantation December 2009 Supplement 4 is all about screening. 
+
+## Pseudomonas
+Pre-transplant isolation does increase the risk of post-transplant recurrence.
+Some studies have found same strain is commonly found post-transplant [@RefWorks:2938], while others have not found this to be the case (need reference).
+No benefit shown (yet) of pre-transplant sinus surgery at reducing post-transplant recurrence. 
+MDR/pan-resistant organism does not preclude transplantation. One study at Toronto and Duke from patients CF transplanted from 1992--2001 did show decreased one and three year survival [@RefWorks:2926], but UNOS data shows no significant difference. 
+
+## Burkholderia
+Several genomovars of B. cepacia, with III cenocepacia and II multivorans being the most frequently isolated. 
+In CF patients, survival was worse at one year in those with post-transplant cencepacia (29%) as compared with other genomovars (89%) [@Alexander2008a; Boussaud2008].
+But given nature of the studies, can really only just recommend caution in transplanting those with cenocepacia.
+
+## Non-Tuberculous Mycobacteria
+Only abscessus abscessus is of concern. Have plenty of literature on this and can add later. 
+
+## Aspergillus
+Not much of a concern pre-transplant unless is a aspergilloma, which them would be removed at the time of surgery. 
+Typically suggest 4--6 months of pre-transplant therapy with an effective drug. 
+
+## Scedosporium
+If S. prolificans may have concern given propensity to cause invasive disease and difficulty in treating it. 
+
 # References

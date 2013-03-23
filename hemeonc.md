@@ -37,6 +37,9 @@ Likewise, the "reverse halo" is not specific for mucor.
     - >90% with nodule >1cm, 80% with multiple nodules, 60% bilateral, 60% with halo sign, 30% consolidation
     - usually peripheral locations
     - flavus may be more common in hematologic malignancies than other species, particularly in AML and ALL [@Steinbach2012]
+    - lung is most common site of presentation for aspegillus (76% lung only) [@Steinbach2012]
+    - Worse survival if neutropenic at time of diagnosis of invasive aspergillus [@Steinbach2012]
+    - median time to diagnosis after HSCT is 97 days (similar to TRANSNET) [@Steinbach2012]
 5. *P. jiroveci*
 6. other molds
     - at least one study found pleural effusion more likely with mucor than with aspergillus

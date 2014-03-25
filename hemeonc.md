@@ -109,7 +109,8 @@ Only abscessus abscessus is of concern. Have plenty of literature on this and ca
 
 ## Aspergillus
 Not much of a concern pre-transplant unless is a aspergilloma, which them would be removed at the time of surgery. 
-Typically suggest 4--6 months of pre-transplant therapy with an effective drug. 
+Typically suggest 4--6 months of pre-transplant therapy with an effective drug. Is there anything on pre-transplant pulmonary aspergillosis that is not colonization?
+[@Singh2013] found in a small multicenter observational study that the median time after lung transplantation for invasive aspergillosis was 423 days. 53% of the patients had nodular disease, which was associated with better outcomes. Non-nodular disease associated with renal failure, CMV infection and prior vori prophylaxis. Successful outcome in 64% and 75% survival overall. But 12 week all-cause mortality 23% in nodular, 54% non-nodular. 
 
 ## Scedosporium
 If S. prolificans may have concern given propensity to cause invasive disease and difficulty in treating it. 

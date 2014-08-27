@@ -3,7 +3,7 @@ Hematology Topics for Fellows
 
 # Pulmonary Infiltrates/Nodules
 
-See [@Wingard2012]
+See [@Wingard2012a]
 
 Apparently HRCT gives diagnosis of pneumonia about four days prior to chest x-ray.
 Infectious causes much less likely in those not receiving chemotherapy, newly diagnosed patients and those post-treatment or post-transplant without GVHD. 
@@ -49,7 +49,7 @@ Likewise, the "reverse halo" is not specific for mucor.
 8. considered mixed infections as well.
 
 # Serum Tests for Aspergillus
-Need to place in references specific for this, all taken from [@Wingard2012].
+Need to place in references specific for this, all taken from [@Wingard2012a].
 
 ## Galactomanin (GM)
 
@@ -59,8 +59,8 @@ Can be positive for penicillium and endemic fungi infections.
 Use of fungal prophylaxis attenuates usefulness of test. 
 Bronchoalveolar lavage GM may increase yield over cultures alone.
 
-## \beta Glucan
-As sensitive but not specific for aspergillus as many fungi release \beta glucan including candida, fusarium, trichosporon and pneumocystis. 
+## Beta-Glucan
+As sensitive but not specific for aspergillus as many fungi release beta-glucan including candida, fusarium, trichosporon and pneumocystis. 
 
 # Post-Transplant Lymphoproliferative Disorder
 

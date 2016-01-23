@@ -1,0 +1,668 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%My BioSketch in LaTeX
+%
+%   2015 Sep  - updating to new format used as of MAY 2015, added contributions to science for r01
+%   2015 Jan  - updated for r21 submission. Can only be four pages long
+%   2014 oct  - updated for r21 submission. Can only be four pages long, black and white only
+%   2011 sept - updated article for lynch and cathy's paper is published. Added
+%               CID paper (listed as contributor). Need to update some links for EF/AI.
+%   2011 Aug - updated for DOM research day. Updated Google Scholar counts
+%   2011 May - updated format of references to have color like DiCarlo's
+%   2011 apr - updated dermatology paper to actually published
+%   2010 15 jun - added K23 funding, found more articles online (??)
+%   2010 1 jun - added my PlosONE & Djimde gameto papers as in press, removed abstracts section.
+%   2010 10 feb - added wang vori paper & in press derm, updated to new format, added CFF funding
+%   2009 27 aug - added available NIHMSID and PMCID 
+%   2009 21 mar - added Sam's in press paper and updated ishlt abstract info
+%   2009 12 mar - updated bernie and gomperts article, added CFF grant and ISHLT abstract
+%   2009 20 jan - updated bernie paper to be in press
+%   2008 7 Oct - updated for K08 submission.
+%   2008 1 May - updated user name and references. Put references in same
+%                  format as in cv.
+%   2008 10 January - Updated references in press
+%   2007 29 November - Updated completely
+%   2005 - initially constructed
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[11pt]{/fitz/home/aorchid/Documents/styles_etc/nih2008}%changes right footer to biographical sketch
+\documentclass[11pt]{nih-blank}%%for others with blank headers, footers
+\usepackage{tgheros}
+\usepackage{microtype}
+\usepackage{processkv}
+\usepackage{parcolumns}
+\usepackage[title]{appendix}
+\usepackage{varioref}% nice with \autoref{label}, use \vpageref[]{label}
+%\usepackage[authoryear,colon]{natbib}%[super,sort&compress]
+\usepackage[smaller,printonlyused]{acronym}
+\usepackage[defblank,neverdecrease]{paralist}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{hanging}
+\usepackage{ctable}
+\usepackage[pdfauthor={Aric Gregson, MD}, pdftitle={NIH Biosketch for Aric L.\ Gregson, MD},pdfborder={0 0 0}]{hyperref}
+\usepackage{fixltx2e}
+% \usepackage{pdfsync}
+%\piname{Gregson, Aric L.} % must comment out for blank style
+
+\includeonly{coursedescriptions,malaria-rx}
+
+% %%%%%%% My own edits:
+% %%%%%%% 
+% % Usage: \mc{number of columns spanned}{Major column heading}
+% Note: different from standard usage, included Left justification
+\newcommand{\mc}[2]{\multicolumn{#1}{l}{#2}}
+\newcommand{\txsp}[1]{\textsuperscript{#1}}
+
+% supress the ugly colored boxes around the active parts of the
+% text. But it doesn't work!!
+\def\pdfBorderAttrs{/Border [0 0 0] } % No border around Links
+% Some further Color tuning. Use xcolorsel for help with the colors
+% \def\pdfborder{/Border [0 0 0]}
+% \definecolor{links}{rgb}{0.2116,0.0104,0.7716} % BlueViolet
+% \def\LinkColor{links}
+% \definecolor{anchors}{rgb}{0.5812,0.0665,0.0659} % IndianRed  
+% \def\AnchorColor{anchor}
+
+% %%%%%%%%%% Heading Modifications for RCA PHS 398
+\renewcommand{\thepart}{\Roman{part}}
+\renewcommand{\thesection}{\thepart.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\roman{subsubsection}}
+
+\numberwithin{equation}{subsection}
+\numberwithin{figure}{subsection}
+\numberwithin{table}{subsection}
+
+%\renewcommand{\bibname}{Literature Cited}
+
+%%%%% Aliases for this paper - shortcuts
+\newcommand{\PF}{\emph{Plasmodium falciparum}}
+\newcommand{\pf}{\emph{P.\ falciparum}}
+\newcommand{\cs}{circumsporozoite\ }
+\newcommand{\ab}{antibody\ }
+\newcommand{\abs}{antibodies\ }
+\newcommand{\xs}{irradiated sporozoites}
+\newcommand{\XS}{irradiated sporozoites}
+\newcommand{\x}{irradiated sporozoite}
+\newcommand{\X}{irradiated sporozoite}
+\newcommand{\TC}{T-cell}
+
+%%% ================================================================%
+%%%%%%%% Document begins below %
+%%% ================================================================%
+\begin{document}
+\vspace{-5mm}
+\flushright{{\scriptsize OMB No.\ 0925-0001/0002 (Rev.\ 08/12 Approved Through 8/31/2015)}}
+\vspace{-2mm}
+\begin{center}%this is the headline for Biographical sketch
+\hrule width 7.4in
+    \vskip 1.5mm
+    {\textbf {BIOGRAPHICAL SKETCH} }\hfill \\ 
+    \vskip 1.5mm
+    \baselineskip 0pt {\scriptsize Provide the following information for the Senior/key personnel and other significant contributors. \\ Follow this format for each person. \textbf{DO NOT EXCEED FIVE PAGES.}}
+\smallskip \hrule width 7.4in
+    \end{center}
+    %next follows name of person for whom biosketch belongs
+% \halign{
+%     \offinterlineskip
+% \strut \quad # \hskip 2.3in  &\vrule \; # \hfill \cr
+% \noalign{\hrule width 7.4in}
+\vspace{-5mm}
+\flushleft NAME: Gregson, Aric Lee 
+\vspace{-0.9mm}
+\flushleft eRA COMMONS USER NAME (credential, e.g., agency login): AGREGSON
+\vspace{2mm}
+
+POSITION TITLE: Associate Clinical Professor of Medicine
+\vspace{2mm}
+
+EDUCTION/TRAINING \textit{(Begin with baccalaureate or other initial professional education, such as nursing, \\and include postdoctoral training and residency training if applicable. Add/delete rows as necessary.)}
+\vskip 2mm
+\hrule width 7.4in
+
+\vspace{-0.42cm}
+\ctable[pos=hbp!,width=7.4in]{l|c|c|l}{}{%
+\FL
+% \mc{4}{\scriptsize{EDUCATION/TRAINING \textit{(Begin with baccalaureate or other initial professional education, such as nursing, and include postdoctoral training.)}}} \ML
+   &  DEGREE  & Completion  & \NN
+{\hfil INSTITUTION AND LOCATION} & { (if } & {Date} & { FIELD OF STUDY} \NN
+   &  applicable)  & MM/YYYY & \ML
+University of California, Santa Cruz, CA & B.A. & 06/1992 & Biology \NN
+University of California, Los Angeles, CA & M.D. & 05/1997 & Medicine \NN
+Harbor--{\smaller UCLA} Medical Center, Torrance, CA & Board Cert.\ & 06/2000 & Internal Medicine \NN
+University of Maryland, Baltimore, MD & Board Cert.\ & 06/2003 & Infectious Diseases \NN
+Center for Vaccine Development, Baltimore, MD & Post-Doc & 10/2005 & Clinical Vaccinology \NN
+}
+
+\vspace{-0.35cm}
+
+\medskip
+\noindent\textbf{A. Personal Statement}
+\smallskip
+
+%%%%% My R21 exosome, facs
+My research is focused on the mechanisms underlying acute and chronic lung allograft rejection and mucosal immunity, particularly the role of infectious agents in these processes. 
+My clinical work involves transplant patients, which helps to inform my research. 
+This clinical work very often involves treating complicated infections due to multidrug-resistant organisms.
+Prior work has evaluated the effects of post-lung transplantation infection events, such as \textit{Pseudomonas aeruginosa} and \textit{Staphylococcus aureus}, on transplant outcomes.
+I have also identified unique BALF lymphocytes associated with acute lung allograft rejection and protection from CLAD. 
+More recent work has focused on the BALF exosomal {\smaller RNA} transcriptome during acute allograft rejection. 
+
+% For Ali DoD application
+% Emphasize how you're an expert in ID and have done clinical research in ID especially is very sick and complicated cases of MDR bugs. If you have also done basic/translational work mention that too.
+
+
+%%%%% Belperio R01
+% My clinical expertise and previous work in studying immune activation in transplant recipients is especially suited to assist in the current work in evaluating {\smaller BALF} lymphocyte biomarkers. 
+% I have developed multiparameter flow cytometry assays to optimize our utilization of post-lung transplant surveillance bronchoscopies as an investigatory milieu of lymphocyte activation. 
+% I have an ongoing collaboration with Dr.\ Belperio and we have published several manuscripts together over the last two years. 
+% All of the proposed methodologies are established and operative in the our laboratory. 
+%%%%% DiCarlo Lymph Deform R01
+% My clinical expertise and previous work in studying immune activation in transplant patients is especially suited to assist in the current work in evaluating new mechanical biomarkers for transplant rejection.
+% Our lab has an expertise in transplant lymphocyte/chemokine immunology, particularly as it pertains to clinical lung transplantation outcomes. 
+% I have developed multiparameter flow cytometry assays to optimize our utilization of post-lung transplant surveillance bronchoscopies as an investigatory milieu of lymphocyte activation.
+% This experience will be of value in adapting the lymphocyte deformation assay to bronchoalveolar lavage specimens.
+%%%%% Nash U01
+% I have expertise in cellular immunology and multiparamter flow cytometry particularly as it pertains to transplant immunology. 
+% My responsibilities on this project include study design, generation of flow cytometry data from blood and bone marrow specimens and analysis of flow cytometry data. 
+% I have an ongoing collaboration with Dr.\ Belperio and we have published several manuscripts together over the last two years. 
+% I will help Drs.\ Belperio and Elashoff develop the statistical models to be used in the analysis of the flow cytometry and clinical data.
+% %I will meet with Drs.\ Belperio and Elashoff on a weekly basis and will be primarily responsible for manuscript preparation. 
+% %I am well versed in the necessary methods and has the administrative skills required to orchestrate the execution of the specific experiments outlined in all of the Specific Aims.  
+% All of the methodologies are established and operative in the our laboratory.
+
+
+\medskip
+\noindent\textbf{B. Positions and Honors}
+\smallskip
+
+\textbf{Positions and Employment}
+% %%% Original Method
+% \smallskip
+% \begin{compactdesc}
+%  \item[\textnormal{2000--2001}] Attending Physician, Internal Medicine, Kaiser Permanente, Bellflower, CA
+%  \item[\textnormal{2000--2001}]	Attending Physician, Emergency Medicine, Kaiser Permanente, Los Angeles, CA
+%  \item[\textnormal{2001--2003}]	Instructor of Medicine, Department of Medicine, University of Maryland School of Medicine, Baltimore, MD
+%  \item[\textnormal{2002--2005}]	Attending Physician \& Clinical Instructor, Division of Emergency Medicine, Department of Surgery, University of Maryland School of Medicine, Baltimore, MD
+%  \item[\textnormal{2003--2005}]	Attending Physician \& Clinical Instructor, Division of Geographic Medicine, University of Maryland School of Medicine, Baltimore, MD
+%  \item[\textnormal{2003--2005}]	Attending Physician, Travellers' Clinic, Department of Medicine, University of Maryland School of Medicine, Baltimore, MD
+%   \item[\textnormal{2005--2006}] Scientific and Technical Consultant, Clinical Vaccinologist, Program Officer, {\smaller RTS,S} Vaccine Project, Malaria Vaccine Initiative, {\smaller PATH}, Bethesda, MD
+%   \item[\textnormal{2006--2007}] Clinical Instructor of Medicine, Transplant Infectious Diseases, \acs{ucla} School of Medicine, Los Angeles, California
+%   \item[\textnormal{2007--}] ~\qquad Assistant Clinical Professor of Medicine, Transplant Infectious Diseases, \acs{ucla} School of Medicine, Los Angeles, California
+% \end{compactdesc}
+\vspace{-0.15in}
+\begin{parcolumns}[colwidths={1=.86in,2=6.6in}]{2}%
+    \colchunk{\flushleft%
+%       2000--2001\\
+%       2000--2001\\
+      2001--2003\\
+      \ \\
+      2002--2005\\
+      \ \\
+      2003--2005\\
+      \ \\
+      2003--2005\\
+      \ \\
+      2005--2006\\
+      \ \\
+      2006--2007\\
+      2007--2009\\
+      2009--2014\\
+      \ \\
+      2014--\\
+      \ \\
+    }
+    \colchunk{\flushleft%
+%       Attending Physician, Internal Medicine, Kaiser Permanente, Bellflower, CA\\
+%       Attending Physician, Emergency Medicine, Kaiser Permanente, Los Angeles, CA\\
+      Instructor of Medicine, Department of Medicine, University of Maryland School of Medicine, \\Baltimore, MD\\
+      Attending Physician \& Clinical Instructor, Division of Emergency Medicine, Department of Surgery, University of Maryland School of Medicine, Baltimore, MD\\
+      Attending Physician \& Clinical Instructor, Division of Geographic Medicine, University of Maryland School of Medicine, Baltimore, MD\\
+      Attending Physician, Travellers' Clinic, Department of Medicine, University of Maryland School of Medicine, Baltimore, MD\\
+      Scientific and Technical Consultant, Clinical Vaccinologist, Program Officer, {\smaller RTS,S} Vaccine Project, Malaria Vaccine Initiative ({\smaller MVI}), {\smaller PATH}, Bethesda, MD\\
+      Clinical Instructor of Medicine, Transplant Infectious Diseases, {\smaller UCLA} School of Medicine\\
+      Assistant Clinical Professor of Medicine, Transplant Infectious Diseases, {\smaller UCLA} School of Medicine\\
+      Health Sciences Assistant Clinical Professor of Medicine, Division of Infectious Diseases, Department of Medicine, David Geffen School of Medicine at {\smaller UCLA}\\
+      Health Sciences Associate Clinical Professor of Medicine, Division of Infectious Diseases, Department of Medicine, David Geffen School of Medicine at {\smaller UCLA}, Transplant Infectious Diseases {\smaller UCLA} Heart \& Lung Transplant; Liver, Small Bowel \& Pancreas Transplant; Stem Cell Transplant Programs.
+      }
+\end{parcolumns}
+
+\smallskip
+\textbf{Other Experiences and Professional Memberships}
+%% Original method
+% \smallskip
+% \begin{compactdesc}
+%  \item[\textnormal{1996}] \qquad\quad	Instructor, Doctoring IV, \acs{ucla} School of Medicine, Los Angeles, CA
+%  \item[\textnormal{1996}] \qquad\quad 	{\smaller UCLA}, Clinical Rotation, Corporaci\'{o}n para Investigaciones Biol\'{o}gicas, Medell\'{i}n, Colombia
+%  \item[\textnormal{1997}] \qquad\quad	Internship, {\smaller NCID}, {\smaller CDC}, Hepatitis Branch, Atlanta, Georgia
+%  \item[\textnormal{1998--2008}] ~\qquad	American Society of Tropical Medicine and Hygiene 
+%  \item[\textnormal{1999}] \qquad\quad   Clinical Fellowship, Universidad de Antioquia, Medell\'{i}n, Leticia \& Tarapac\'{a}, Colombia
+%  \item[\textnormal{2000}] \qquad\quad   Clinical Malariology, Shoklo Malaria Research Unit, Mae Sod, Thailand
+%  \item[\textnormal{2002--2003}]	Clinical Trial Site Preparation, University of Bamako/\acs{cvd}, Bancoumana, Mali
+%  \item[\textnormal{2002--2004}]	Vaccine Trial Site Preparation, University of Bamako/\acs{cvd}, Bandiagara, Mali
+%  \item[\textnormal{2002--2005}]	Acting \acs{pi} Phase 1 Vaccine Trial, Center for Vaccine Development, Baltimore, MD
+% \item[\textnormal{2005--2006}]	Phase 2 trial site preparation, protocol/\acs{sop} development, \acs{irb} submissions, Malaria Vaccine Initiative, {\smaller PATH}, Bethesda, MD
+%  \item[\textnormal{2006--}] ~\qquad	International Society for Heart \& Lung Transplantation
+%  \item[\textnormal{2006--}] ~\qquad	American Society of Transplantation
+%  \item[\textnormal{2007--}] ~\qquad	Editorial Board, {\smaller PL}o{\smaller S} {\smaller ONE}
+%  \item[\textnormal{2007--}] ~\qquad	Member, Executive Lung Transplant Committee, \acs{ucla} Medical Center
+%  \item[\textnormal{2008--}] ~\qquad    Medical Advisory Committee, Fertility Cryobank, LLC, Los Angeles, CA
+% \end{compactdesc}
+\vspace{-0.15in}
+\begin{parcolumns}[colwidths={1=.86in,2=6.6in}]{2}%
+    \colchunk{\flushleft%
+      % 1996\\
+      % 1996\\
+      % 1997\\
+      % 1998--2008\\
+      % 1999\\
+      % 2000\\
+      % 2002--2003\\
+      % 2002--2004\\
+      % 2002--2005\\
+      % 2005--2006\\
+      % \ \\
+      2006--\\
+      2007--\\
+      2007--\\
+      % 2008--\\      
+      2012--\\
+      % 2012--\\
+      2012--\\
+      % 2012--2013\\
+      2012--\\
+      \ \\
+      2012--2014\\
+      2012--2014\\
+      \ \\
+      \ \\
+      \ \\
+      2012--2013\\
+      \ \\
+      \ \\
+      \ \\
+      2013--\\
+      \ \\ 
+      \ \\
+      \ \\
+      2013--\\
+      % 2013--\\
+}
+    \colchunk{\flushleft%
+      % Instructor, Doctoring IV, \acs{ucla} School of Medicine, Los Angeles, CA\\
+      % {\smaller UCLA}, Clinical Rotation, Corporaci\'{o}n para Investigaciones Biol\'{o}gicas, Medell\'{i}n, Colombia\\
+      % Internship, {\smaller NCID}, {\smaller CDC}, Hepatitis Branch, Atlanta, Georgia\\
+      % American Society of Tropical Medicine and Hygiene\\
+      % Clinical Fellowship, Universidad de Antioquia, Medell\'{i}n, Leticia \& Tarapac\'{a}, Colombia\\
+      % Clinical Malariology, Shoklo Malaria Research Unit, Mae Sod, Thailand\\
+      % Clinical Trial Site Preparation, University of Bamako/\acs{cvd}, Bancoumana, Mali\\
+      % Vaccine Trial Site Preparation, University of Bamako/\acs{cvd}, Bandiagara, Mali\\
+      % Acting \acs{pi} Phase 1 Vaccine Trial, Center for Vaccine Development, Baltimore, MD\\
+      % Phase 2 trial site preparation, protocol/\acs{sop} development, \acs{irb} submissions, Malaria Vaccine Initiative, {\smaller PATH}, Bethesda, MD\\
+      International Society for Heart \& Lung Transplantation and the American Society of Transplantation\\
+      Editorial Board, {\smaller PL}o{\smaller S} {\smaller ONE}\\
+      Member, Executive Lung Transplant Committee, {\smaller UCLA} Medical Center\\
+      % Medical Advisory Committee, Fertility Cryobank, LLC, Los Angeles, CA\\
+      Local Principle Investigator, Use of Pentostam for the Treatment of Leishmania\\
+      % Editorial Board, Dataset Papers in Medicine\\
+      Associate Editor, {\smaller PL}o{\smaller S} Neglected Tropical Diseases\\
+      % Member, Infectious Diseases Management Program, {\smaller UCLA} Medical Center\\
+      Site Co-Investigator, {\smaller CAPSIL}, Prophylaxis Versus Preemptive Therapy for the Prevention of {\smaller CMV} in High-Risk R\txsp{-}D\txsp{+} Liver Transplant Recipients, {\smaller NCT}01552369.\\
+      Member, Expert Fungal Panel, Scientific Council on Infectious Diseases, {\smaller ISHLT}\\
+      Site Co-Principle Investigator, {\smaller DEFLECT-1}, {\smaller UCLA} Medical Center \& Optimer Pharmaceuticals, Inc, A Phase 3b Multi-Center, Double-Blind, Randomized, Placebo Controlled Study to Demonstrate the Safety and Efficacy of Fidaxomicin for Prophylaxis against Clostridium difficile-Associated Diarrhea in Adults Undergoing Hematopoietic Stem Cell Transplantation {\smaller NCT}01691248.\\
+      Site Co-Investigator, Maribavir/Protocol 1263-202, {\smaller UCLA} Medical Center \& ViroPharma Incorporated, A Phase 2, Randomized Study to Assess the Safety and Anti-Cytomegalovirus ({\smaller CMV}) Activity of Different Doses of Maribavir for Treatment of {\smaller CMV} Infections that are Resistant or Refractory to Treatment with Ganciclovir/Valganciclovir or Foscarnet in Transplant Recipients {\smaller NCT}01611974.\\
+      Site Co-Investigator, {\smaller CMX001-301}, {\smaller UCLA} Medical Center \& Chimerix, Incorporated, A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Multicenter, Phase 3 Study of the Safety, Tolerability, and Efficacy of {\smaller CMX}001 for the Prevention of Cytomegalovirus ({\smaller CMV}) Infection in {\smaller CMV}-seropositive (R\txsp{+}) Hematopoietic Stem Cell Transplant Recipients, {\smaller NCT}01769170.\\
+      Infectious Diseases Society of America\\
+      % Member, P \& T Antibiotic Subcommittee, {\smaller UCLA} Medical Center
+      }
+\end{parcolumns}
+
+\vspace{.1in}
+\hangpara{1em}{1}\textit{Ad-hoc} reviewer for Lancet Respiratory Medicine, Annals of Internal Medicine, Journal of Infectious Diseases, {\smaller JAMA}, Vaccine, American Journal of Transplantation, International Society for Heart \& Lung Transplantation, Transplantation, Transplant Infectious Diseases, Clinical Transplantation, {\smaller PLOS} Neglected Tropical Diseases, American Journal of Tropical Medicine and Hygiene, Molecular and Biochemical Parasitology, {\smaller ACP PIER} Modules, Clinical Dermatology
+
+\smallskip
+\textbf{Honors and Awards}
+\vspace{-0.15in}
+%%%% Original method
+%\smallskip
+% \begin{compactdesc}
+%     \item[\textnormal{1996}] \qquad\quad Marietta Voge Memorial Fund for Tropical Medicine, \acs{ucla} School of Medicine
+
+%     \item[\textnormal{1997}] \qquad\quad Alpha Omega Alpha, \acs{ucla} School of Medicine    
+    
+%     \item[\textnormal{2001}] \qquad\quad Malaria Research Training Program in Mali, University of Maryland-Fogarty International Center
+
+%     \item[\textnormal{2002}] \qquad\quad Burroughs Wellcome Fund-American Society of Tropical Medicine and Hygiene Post-Doctoral\\ Fellowship in Tropical Disease Research
+    
+%     \item[\textnormal{2005}] \qquad\quad Burroughs Wellcome Fund-Howard Hughes Medical Institute Course in Scientific Management
+% \end{compactdesc}
+%% Alternate method for cleaner alignment
+\begin{parcolumns}[colwidths={1=.86in,2=6.6in}]{2}%
+    \colchunk{\flushleft%
+      1992\\
+      1996\\
+      1997\\
+      2001\\
+      2002\\
+      \ \\
+      2005\\
+      2009\\
+      2011\\
+      2013\\
+      \ \\
+      2014\\
+      \ \\
+    }
+    \colchunk{\flushleft%
+      Phi Beta Kappa, Honors in Biology, College Honors, University of California, Santa Cruz\\
+      Marietta Voge Memorial Fund for Tropical Medicine, {\smaller UCLA} School of Medicine\\
+      Alpha Omega Alpha, {\smaller UCLA} School of Medicine\\
+      Malaria Research Training Program in Mali, University of Maryland-Fogarty International Center\\
+      Burroughs Wellcome Fund-American Society of Tropical Medicine and Hygiene Post-Doctoral Fellowship in Tropical Disease Research\\
+      Burroughs Wellcome Fund-Howard Hughes Medical Institute Course in Scientific Management\\
+      Visiting Professor Asahi General Hospital, Asahi, Japan\\
+      Clinical and Health Services Research Award, Junior Faculty, Department of Medicine Research Day\\
+      Invited Lecturer \& Moderator, The Role of Bacterial Infection \& Colonization on Chronic Allograft Dysfunction, International Society for Heart \& Lung Transplantation, 33\txsp{rd} Annual Meeting, Montreal
+      Invited Lecturer, Treatment of Invasive Fungal Infections: State of the Art. Consensus Guidelines \& Recommendations {\smaller ISHLT} Fungal Expert Panel, 34\txsp{th} Annual Meeting, San Diego, California
+}
+
+\end{parcolumns}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \renewcommand{\refname}{\normalsize{C. Selected peer-reviewed publications (in chronological order).}\label{gregsonbs}}
+\medskip
+\noindent\textbf{C. Contribution to Science}
+% \smallskip
+
+\paragraph{Adapted New Technologies to Advance Understanding Lung Transplant Immunology}
+Long-term outcomes in lung transplantation have not substantially improved in nearly thirty years. 
+New approaches to understanding the allograft's response to a variety of insults is critical to developing therapies to improve survival. 
+I was the first to identify novel effector lymphocyte populations associated with acute allograft rejection using flow cytometry. 
+I was also the first to apply multiparameter flow cytometry to BALF populations in lung transplantation, identifying the mTreg as protective against CLAD. 
+More recently, I was the first to describe the exosomal RNA transcriptome during acute rejection and quiescence, and to compare this to the BALF cell pellet, thereby identifying a unique allograft compartment. 
+
+\renewcommand{\refname}{\normalsize{}\label{gregsonbs}}
+\begin{thebibliography}{1}
+
+ \bibitem[1]{} \textbf{Gregson AL}, Hoji A, Saggar R, Ross DJ, Kubak BM, Jamieson BD, Weigt SS, Lynch III JP, Ardehali A, Belperio JA, Yang OO. Bronchoalveolar immunologic profile of acute human lung transplant allograft rejection. \textcolor{Black}{\textit{Transplantation}} \textbf{2008} Apr 15; 85(7):1056--1059. PMC2744369
+
+  \bibitem[2]{} \textbf{Gregson AL}, Hoji A, Palchevskiy V, Hu S, Weigt SS, Liao E, Derhovanessian A, Saggar R, Song S, Elashoff R, Yang OO, Belperio JA. Protection Against Bronchiolitis Obliterans Syndrome is Associated with Allograft {\smaller CCR}7\txsp{+}{\smaller CD}45RA\txsp{-} T Regulatory Cells. \textcolor{Black}{\textit{PLoS {\smaller ONE}}} \textbf{2010} Jun 29; 5(6):e11354. PMC2894051
+
+ \bibitem[3]{} \textbf{Gregson AL}, Hoji A, Injean P, Poynter ST, Briones C, Palchevskiy V, Weigt SS, Shino M, Derhovanessian A, Sayah D, Saggar R, Ross D, Ardehali A, Lynch III JP, Belperio JA. Altered Exosomal RNA Profiles in Bronchoalveolar Lavage from Lung Transplants with Acute Rejection. \textit{American Journal of Respiratory and Critical Care Medicine} \textbf{2015} Dec; 192(12):1490--1503. \href{http://www.atsjournals.org/doi/abs/10.1164/rccm.201503-0558OC#.VeDm8JWW25M}{\nolinkurl{10.1164/rccm.201503-0558OC}}~(See accompanying Editorial)
+    %% {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?bsearch=AMERICAN+JOURNAL+OF+RESPIRATORY+AND+CRITICAL+CARE+MEDICINE&searchby=journal&orderby=eigenfactor}{{\smaller EF: 0.102819 AI: 3.7005}}
+    %%   \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+RESP+CRIT+CARE}{{\smaller JIF: 11.041}}
+    %% } 
+
+\end{thebibliography}
+
+\paragraph{Identify Host-Pathogen Interaction Influences within Transplantation}
+Transplant recipients are constantly exposed to environmental stimuli, and this is particularly relevant for lung transplant recipients whose transplanted organ acts to filter the world around them. 
+With impaired defenses and altered immune responses, pathogen interactions within the host become ever more important determiners of the allograft fate. 
+In addition to studying this relationship, I developed a multistate Markovian-based model to examine the effect of \textit{Pseudomonas aeruginosa} and \textit{Staphylococcus aureus} upon the outcomes of death, CLAD and death after CLAD, within the context of the lung allograft milieu. 
+This allowed for an accurate determination of each co-variate depending upon the present state of the transplant recipient, an approach that had not previously been used. 
+\vspace{-10mm}
+\renewcommand{\refname}{\normalsize{}\label{gregsonbs}}
+\begin{thebibliography}{2}
+
+ \bibitem[1]{} Kubak BM, \textbf{Gregson AL}, Pegues DA, Leibowitz MR, Carlson M, Marelli D, Patel J, Laks H, Kobashigawa JA. Use of Hearts Transplanted From Donors With Severe Sepsis and Infectious Deaths. \textcolor{Black}{\textit{Journal of Heart and Lung Transplantation}} \textbf{2009} March; 28(3):260--265. 
+
+  \bibitem[2]{} Weigt SS, \textbf{Gregson AL}, Deng JC, Lynch JP, Belperio JA. Respiratory Viral Infections in Hematopoietic Stem Cell and Solid Organ Transplant Recipients. \textcolor{Black}{\textit{Seminars in Respiratory and Critical Care Medicine}} \textbf{2011} Aug; 32(4):471--93. PMC4209842
+
+  \bibitem[3]{} \textbf{Gregson AL}, Wang X, Weigt SS, Elashoff R, Lynch JP III, Ross DJ, Kubak BM, Saggar R, Ardehali A, Li G, Belperio J. Interaction Between Pseudomonas and CXC Chemokines Increases Risk of {\smaller BOS} and Death in Lung Transplantation {\color{Black}\textit{American Journal of Respiratory and Critical Care Medicine}} \textbf{2013} Mar; 187(5):518--526. PMC3733405
+
+\bibitem[4]{} \textbf{Gregson AL}, Wang X, Injean P, Weigt S, Shino M, Sayah D, DerHovanessian A, Lynch JP, Ross DJ, Saggar R, Ardehali A, Li G, Elashoff R, Belperio JA. Staphylococcus via an Interaction with the {\smaller ELR}\txsp{+} {\smaller CXC} Chemokine {\smaller ENA}-78 is Associated with {\smaller BOS}. \textit{American Journal of Transplantation} \textbf{2015} Mar; 15(3):792--799. \href{http://onlinelibrary.wiley.com/doi/10.1111/ajt.13029/abstract}{\nolinkurl{10.1111/ajt.13029}}
+
+\bibitem[5]{} Humphries R, Yang S, Hemarajata P, Ward K, Hindler J, Miller SC, \textbf{Gregson A}. First Report of Ceftazidime-Avibactam Resistance in a KPC-3 Expressing Klebsiella pneumoniae. \textit{Antimicrobial Agents and Chemotherapy} \textbf{2015} July; Published Online. \href{http://aac.asm.org/content/early/2015/07/14/AAC.01165-15.long}{\nolinkurl{10.1128/AAC.01165-15}}.
+
+\end{thebibliography}
+
+
+\paragraph{Examine Host-Pathogen Interactions Between Malaria and Humans}
+Malarial drug resistance is a significant problem that has plagued eradication and treatment efforts since before the first World War. 
+I designed and executed a trial, the first, to demontrate the transmission of drug-resistant malarial gametocytes in the field from infected persons to host mosquitoes. 
+Although previously shown in the laboratory setting, this was the first ``natural'' demonstration of this and noted that choice of drug treatment has an effect on transmission of drug resistance genes. 
+
+\vspace{-10mm}
+\renewcommand{\refname}{\normalsize{}\label{gregsonbs}}
+\begin{thebibliography}{3}
+
+ \bibitem[1]{} \textbf{Gregson AL}, Plowe CV. Mechanisms of Resistance of Malaria Parasites to Antifolates. \textit{Pharmacological Reviews} \textbf{2005} Mar; 57(1):118--145.
+
+ \bibitem[2]{} Beavogui A, Djimd\'{e} AA, \textbf{Gregson AL}, Dao A, Maiga H, Fofana B, Coulibaly B, Tekete M, Sacko A, Ouologuem D, Niare O, Kone A, Toure AM, Plowe CV, Doumbo OK. Low Infectivity of Post-Sulfadoxine-Pyrimethamine \textit{Plasmodium falciparum} Gametocytes to \textit{Anopheles gambiae} in Mali. \textit{International Journal for Parasitology} \textbf{2010} May 8; 40(10):1213--1220. PMC3571761 \href{http://dx.doi.org/10.1016/j.ijpara.2010.04.010}{\nolinkurl{doi: 10.1016/j.ijpara.2010.04.010}}
+
+\end{thebibliography}
+
+\paragraph{Malaria Vaccine Development}
+As noted above, drug resistance has been the bain of malaria eradication for decades. 
+Vaccine development has been held as the holy grail for malaria control and eradication, but thus far an effective, universal vaccine remains elusive. 
+My prior work and training in vaccinology is particularly relevant to my present work in understanding the innate and adaptive immune response to allotransplantation. 
+
+
+\vspace{-10mm}
+\renewcommand{\refname}{\normalsize{}\label{gregsonbs}}
+\begin{thebibliography}{4}
+
+ \bibitem[1]{} \textbf{Gregson AL}, Edelman RA. Does Antigen Overload Exist?. \textit{Immunology Allergy Clinics of North America} Vaccines in the 21st Century, \textbf{2003} Nov; 23(3):649--664. 
+
+ \bibitem[2]{} Thera MA, Doumbo OK, Coulibali D, \emph{et. al.} Safety and Allele-Specific Immunogenicity of a Malaria Vaccine in Malian Adults: Results of a Phase I Randomized Trial.  \textcolor{Black}{\textit{PLoS Clinical Trials}}.  \textbf{2006} Nov 24; 1(7):e34. \href{http://dx.doi.org/10.1371/journal.pctr.0010034}{\nolinkurl{doi:10.1371/journal.pctr.0010034}}~ 
+
+ \bibitem[3]{} Thera MA, Doumbo OK, Coulibali D, \emph{et. al.} Safety and Immunogenicity of an AMA-1 Malaria Vaccine in Malian Adults: Results of a Phase I Randomized Trial. \textcolor{Black}{\textit{PLoS {\smaller ONE}}} \textbf{2008} Jan 23; 3(1):e1465. PMC2186380 \href{http://dx.doi.org/10.1371/journal.pone.0001465}{\nolinkurl{doi:10.1371/journal.pone.0001465}}~ 
+
+ \bibitem[4]{} \textbf{Gregson AL}, Oliveira G, Othoro Watta C, Calvo-Calle JM, Thorton GB, Nardin E, Edelman R. Phase I trial of an alhydrogel adjuvanted hepatitis B core virus-like particle containing epitopes of \emph{Plasmodium falciparum} circumsporozoite protein. \textcolor{Black}{\textit{PLoS {\smaller ONE}}}  \textbf{2008} Feb 6; 3(2):e1556. PMC2216688
+
+
+\end{thebibliography}
+
+
+Complete list of my published work can be found in this publicly available, digital database: \href{http://orcid.org/0000-0001-6806-0868}{\nolinkurl{http://orcid.org/0000-0001-6806-0868}}
+
+\vskip 3mm
+
+% \newpage
+\noindent\textbf{D. Research Support}
+\smallskip \par \noindent
+
+\textbf{Ongoing Research Support}
+
+%%%%%%%%%%%%% First Grant %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{parcolumns}[colwidths={1=5in,2=2in}]{2}
+    \colchunk{
+    \begin{compactdesc}
+        \item K23 HL102220 Career Development Award\hfil (Gregson PI)
+        \item {\smaller NIH}/{\smaller NHLBI}
+    \end{compactdesc}}
+
+    \colchunk{
+    \begin{compactdesc}
+      \item 12/1/10--06/30/16
+    \end{compactdesc}}
+\end{parcolumns}
+``Role of T Regulatory Cells in Preventing Human {\smaller BOS}''
+
+Proposal objectives are to develop my career in translational transplantation immunology through the investigation of important lymphocyte subsets and their effects and associations with {\smaller BOS} outcomes in lung transplantation.
+
+
+%%%%%%%%%%%%%% COMPLETED RESEARCH SUPPORT %%%%%%%%%%
+\vspace{0.5cm} \par % \noindent
+\textbf{Completed Research Support}
+
+%%%%%%%%%%%%% Next Grant %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{parcolumns}[colwidths={1=5in,2=2in}]{2}
+    \colchunk{
+    \begin{compactdesc}
+        \item Pilot and Feasibility Award\hfil (Gregson PI)
+        \item Cystic Fibrosis Foundation
+    \end{compactdesc}}
+
+    \colchunk{
+    \begin{compactdesc}
+      \item 4/1/10--3/31/12
+    \end{compactdesc}}
+\end{parcolumns}
+``Harnessing T Regulatory Cells to Prevent Chronic Lung Allograft Rejection''
+
+Proposal objectives are to establish a protective association of intragraft T\textsubscript{reg} against {\smaller BOS} and to generate a better understanding of the biologic mechanisms underlying the intragraft recruitment and persistence of T\textsubscript{reg}, particularly with regards to {\smaller CCL}21/{\smaller CCL}19 and {\smaller IL}-1.
+
+
+%% %%%%%%%%%%%%%%%% Next Grant %%%%%%%%%%%%%%%%%%%%%%%
+%% \begin{parcolumns}[colwidths={1=5in,2=2in}]{2}
+%%     \colchunk{
+%%     \begin{compactdesc}
+%%         \item Clinical Translational Seed Grant\hfil (Gregson PI)
+%% %         \item Gerald Oppenheimer Foundation,  David Geffen School of Medicine at {\smaller UCLA}
+%%     \end{compactdesc}}
+
+%% %     \colchunk{
+%% %     \begin{compactdesc}
+%% %       \item 4/1/10--3/31/11
+%% %     \end{compactdesc}}
+%%  \end{parcolumns}
+%% %  ``Protection Against Development of {\smaller BOS} by {\smaller CCR}7 T Regulatory Cells''
+
+%% % The overall objective of this application is to determine if {\smaller BALF} memory T\textsubscript{reg} can identify lung transplant recipients at reduced risk of {\smaller BOS} development.
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% \nocite{*}
+%% \bibliographystyle{plain}
+%% remove all color from the references
+
+
+ % \bibitem[1]{} Sokolove PE, Lee BS, Krawczyk JA, Banos PT, \textbf{Gregson AL}, Boyce DM, Lewis RJ. Implementation of an Emergency Department Triage Procedure for the Detection and Isolation of Patients at High Risk for Having Pulmonary Tuberculosis. \textcolor{Black}{\textit{Annals of Emergency Medicine}} \textbf{2000} Apr; 35(4):327--336. \href{http://dx.doi.org/10.1016/S0196-0644(00)70050-3}{\nolinkurl{doi:10.1016/S0196-0644(00)70050-3}}~ 
+ %   {\color{Black}\href{http://www.eigenfactor.org/detail.php?year=2006&jrlname=ANN%20EMERG%20MED&issnnum=0196-0644}{{\smaller EF: 0.020 AI: 1.332}} 
+ %       \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=ANN+EMERG+MED}{{\smaller JIF: 4.5}}~ 
+ %       \href{http://www.scopus.com/record/display.url?eid=2-s2.0-0033900820&origin=inward&txGid=VWsBqLSNMzShrBOla5xyIwt%3a8}{{\smaller Scopus Cites: 11}}~ 
+ %       \href{http://apps.webofknowledge.com/CitedFullRecord.do?product=WOS&colName=WOS&SID=4AG6pnd7daKF6IABJdC&search_mode=CitedFullRecord&isickref=WOS:000086250500001}{{\smaller ISI Cites: 10}}~
+ %       \href{http://scholar.google.com/scholar?cites=10844131317441698410&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 16}}
+ %       }
+
+
+
+ % \bibitem[3]{} Thera MA, Doumbo OK, Coulibali D, \emph{et. al.} Safety and Allele-Specific Immunogenicity of a Malaria Vaccine in Malian Adults: Results of a Phase I Randomized Trial.  \textcolor{Black}{\textit{PLoS Clinical Trials}}.  \textbf{2006} Nov 24; 1(7):e34. \href{http://dx.doi.org/10.1371/journal.pctr.0010034}{\nolinkurl{doi:10.1371/journal.pctr.0010034}}~ 
+ %   {\color{Black}\href{http://scholar.google.com/scholar?cites=2534822405987072634&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 28}}}
+
+ % \bibitem[4]{} Thera MA, Doumbo OK, Coulibali D, \emph{et. al.} Safety and Immunogenicity of an AMA-1 Malaria Vaccine in Malian Adults: Results of a Phase I Randomized Trial. \textcolor{Black}{\textit{PLoS {\smaller ONE}}} \textbf{2008} Jan 23; 3(1):e1465. \href{http://dx.doi.org/10.1371/journal.pone.0001465}{\nolinkurl{doi:10.1371/journal.pone.0001465}}~ 
+ %   {\color{Black}\href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=6&journal=PLOS+ONE}{{\smaller EF: 0.164 AI: 1.918 JIF: 4.6}}~ 
+ %     \href{http://www.scopus.com/results/citedbyresults.url?sort=plf-f&cite=2-s2.0-44849126049&src=s&imp=t&sid=VWsBqLSNMzShrBOla5xyIwt%3a160&sot=cite&sdt=a&sl=0&origin=inward&txGid=VWsBqLSNMzShrBOla5xyIwt%3a15}{{\smaller Scopus Cites: 27}}~ 
+ %     \href{http://apps.webofknowledge.com/CitedFullRecord.do?product=WOS&colName=WOS&SID=4AG6pnd7daKF6IABJdC&search_mode=CitedFullRecord&isickref=WOS:000260503900011}{{\smaller ISI Cites: 32}}~ 
+ %     \href{http://scholar.google.com/scholar?cites=15540812245970669613&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 35}}
+ %     }
+
+
+ \bibitem[3]{} \textbf{Gregson AL}, Hoji A, Saggar R, Ross DJ, Kubak BM, Jamieson BD, Weigt SS, Lynch III JP, Ardehali A, Belperio JA, Yang OO. Bronchoalveolar immunologic profile of acute human lung transplant allograft rejection. \textcolor{Black}{\textit{Transplantation}} \textbf{2008} Apr 15; 85(7):1056--1059. PMCID: PMC2744369
+
+ \bibitem[4]{} Weigt SS, Elashoff RM, Keane MP, Strieter RM, Gomperts BN, Xue YY,  Ardehali A, \textbf{Gregson AL}, Kubak B, Fishbein MC, Saggar R, Ross DJ, Lynch III JP, Zisman DA, Belperio JA. Altered Levels of CC Chemokines during Pulmonary CMV Predict Mortality and Mortality Due to BOS Post-Lung Transplantation. \textcolor{Black}{\textit{American Journal of Transplantation}} \textbf{2008} July; 8(7):1512--1522. PMCID: PMC2760345
+
+ \bibitem[5]{} Saggar R, Ross DJ, Saggar R, Zisman DA, \textbf{Gregson A}, Lynch JP, Keane MP, Weigt SS, Ardehali A, Kubak B, Lai C, Elashoff D, Fishbein MC, Wallace WD,  Belperio JA.  Pulmonary Hypertension Associated With Lung Transplantation Obliterative Bronchiolitis Is Due To Vascular Remodeling of the Allograft. \textcolor{Black}{\textit{American Journal of Transplantation}} \textbf{2008} July; 8(9):1921--1930. 
+
+ \bibitem[6]{} Kubak BM, \textbf{Gregson AL}, Pegues DA, Leibowitz MR, Carlson M, Marelli D, Patel J, Laks H, Kobashigawa JA. Use of Hearts Transplanted From Donors With Severe Sepsis and Infectious Deaths. \textcolor{Black}{\textit{Journal of Heart and Lung Transplantation}} \textbf{2009} March; 28(3):260--265. 
+
+ % \bibitem[10]{} Nickerson DW, Presson AP, Weigt SS, \textbf{Gregson A}, Belperio JA, Gomperts BN. Quantification of cytokeratin 5 mRNA expression in the circulation of healthy human subjects and after lung transplantation. \textcolor{Black}{\textit{PLoS {\smaller ONE}}} \textbf{2009}; 4(6):e5925. \href{http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0005925}{\nolinkurl{doi:10.1371/journal.pone.0005925}}~ 
+ %     {\color{Black} \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=6&journal=PLOS+ONE}{{\smaller EF: 0.164 AI: 1.918 JIF: 4.6}}~ 
+ %     }
+
+ \bibitem[7]{} Weigt SS, Elashoff RM, Huang C, Ardehali A, \textbf{Gregson AL}, Kubak B, Fishbein MC, Saggar R, Keane MP, Saggar R,  Lynch JP, Zisman DA, Ross DJ, Belperio JA. Aspergillus Colonization of the Lung Allograft is a Risk Factor for Bronchiolitis Obliterans Syndrome. \textcolor{Black}{\textit{American Journal of Transplantation}} \textbf{2009} May; 9(8):1903 - 1911. 
+
+ % \bibitem[12]{}Kun H, Moore A, Mascola L, \textit{et.\ al.}.  Transmission of Trypanosoma cruzi by Heart Transplantation. \textcolor{Black}{\textit{Clinical Infectious Diseases}}. \textbf{2009} Jun 1; 48(11):1534--40. \href{http:dx.doi.org/10.1086/598931}{\nolinkurl{doi: 10.1086/598931}}~
+ %   {\color{Black}\href{http://www.eigenfactor.org/rankings.php?search=CLINICAL+INFECTIOUS+DISEASES&search2=&search3=&searchby=journal}{{\smaller EF:0.139 AI: 2.575}}
+ %       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=CLIN+INFECT+DIS}{{\smaller JIF: 8.2}}~
+ %       \href{http://apps.webofknowledge.com/CitedFullRecord.do?product=WOS&colName=WOS&SID=4AG6pnd7daKF6IABJdC&search_mode=CitedFullRecord&isickref=WOS:000265749400006}{{\smaller ISI Cites: 16}}~
+ %       \href{http://scholar.google.com/scholar?cites=4422604385336448507&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 23}}
+ %     }
+
+ % \bibitem[13]{} Wang TF, Wang T, Altman R, Eshaghian P, Lynch JP, Ross DJ, Belperio JA, Weigt SS, Saggar R, \textbf{Gregson A}, Kubak B, Saggar R. Periostitis Secondary to Prolonged Voriconazole Therapy in Lung Transplant Recipients. \textcolor{Black}{\textit{American Journal of  Transplantation}}. \textbf{2009} Oct 21; 9(12):2845--2850. \href{http://dx.doi.org/10.1111/j.1600-6143.2009.02837.x}{\nolinkurl{doi: 10.1111/j.1600-6143.2009.02837.x}}~ 
+ %   {\color{Black}\href{http://www.eigenfactor.org/detail.php?year=2006&jrlname=AM%20J%20TRANSPLANT&issnnum=1600-6135}{{\smaller EF: 0.065 AI: 1.848}} 
+ %       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 6.0}}~
+ %       \href{http://apps.webofknowledge.com/CitedFullRecord.do?product=WOS&colName=WOS&SID=4AG6pnd7daKF6IABJdC&search_mode=CitedFullRecord&isickref=WOS:000272127600026}{{\smaller ISI Cites: 5}}~ 
+ %       \href{http://scholar.google.com/scholar?cites=9352467524761589821&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 6}} 
+ %       }
+
+  \bibitem[8]{} Saggar R, Khanna D, Furst DE, Belperio JA, Park GS, Weigt SS, Kubak B, Ardehali A, Derhovanessian A, Clements PJ, Shapiro S, Hunter C, \textbf{Gregson A}, Fishbein MC, Lynch JP, Ross DJ, Saggar R. Systemic Sclerosis and Bilateral Lung Transplantation: A Single Center Experience. \textcolor{Black}{\textit{European Respiratory Journal}}. \textbf{2010} Mar 29; 36(4):893--900. PMCID: PMC2921556
+
+
+  % \bibitem[15]{} Beavogui A, Djimd\'{e} AA, \textbf{Gregson AL}, Dao A, Maiga H, Fofana B, Coulibaly B, Tekete M, Sacko A, Ouologuem D, Niare O, Kone A, Toure AM, Plowe CV, Doumbo OK. Low Infectivity of Post-Sulfadoxine-Pyrimethamine \textit{Plasmodium falciparum} Gametocytes to \textit{Anopheles gambiae} in Mali. \textcolor{Black}{\textit{International Journal for Parasitology}} \textbf{2010} May 8; 40(10):1213--1220. \href{http://dx.doi.org/10.1016/j.ijpara.2010.04.010}{\nolinkurl{doi: 10.1016/j.ijpara.2010.04.010}}~ 
+  %     {\color{Black}\href{http://www.eigenfactor.org/rankings.php?search=INTERNATIONAL+JOURNAL+FOR+PARASITOLOGY&search2=&search3=&searchby=journal}{{\smaller EF: 0.020 AI: 1.213}}
+  %        \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=INT+J+PARASITOL}{{\smaller JIF: 3.9}}~
+  %        \href{http://apps.webofknowledge.com/CitedFullRecord.do?product=WOS&colName=WOS&SID=4AG6pnd7daKF6IABJdC&search_mode=CitedFullRecord&isickref=WOS:000280013000014}{{\smaller ISI Cites: 2}}~ 
+  %        \href{http://scholar.google.com/scholar?cites=13371683552743464380&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 3}}
+  %        }
+
+
+  % \bibitem[17]{} Zaghi D, Panosian C, Gutierrez M, \textbf{Gregson A}, Taylor E, Ochoa MT. New World Cutaneous Leishmaniasis: Current Challenges in Diagnoses and Parenteral Therapy. \textcolor{Black}{\textit{Journal of the American Academy of Dermatology}} \textbf{2011} Mar; 64(3):587--592. \href{http://dx.doi.org/10.1016/j.jaad.2009.08.045}{\nolinkurl{10.1016/j.jaad.2009.08.045}}~ 
+  %   {\color{Black} \href{http://www.eigenfactor.org/detail.php?year=2008&jrlname=J%20AM%20ACAD%20DERMATOL&issnnum=0190-9622}{{\smaller EF:0.035 AI:0.84}} 
+  %       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=J+AM+ACAD+DERMATOL}{{\smaller JIF: 4.2}}~ 
+  %       } 
+
+  \bibitem[10]{} Huang HC, Weigt SS, Derhovanessian A, Palchevskiy V, Ardehali A, Saggar R, Saggar R, Kubak B, \textbf{Gregson A}, Ross DJ, Lynch JP, Elashoff R, Belperio JA. Non-Tuberculous Mycobacterium Infection after Lung Transplantation is Associated with Increased Mortality. \textcolor{Black}{\textit{Journal of Heart and Lung Transplantation}} \textbf{2011} Jul; 30(7):790--8. PMCID: PMC3942162
+
+  \bibitem[11]{} Weigt SS, \textbf{Gregson AL}, Deng JC, Lynch JP, Belperio JA. Respiratory Viral Infections in Hematopoietic Stem Cell and Solid Organ Transplant Recipients. \textcolor{Black}{\textit{Seminars in Respiratory and Critical Care Medicine}} \textbf{2011} Aug; 32(4):471--93. PMCID: \textit{pending}
+
+  \bibitem[12]{} Weigt SS, Derhovanessian A, Liao E, Hu S, \textbf{Gregson AL}, Kubak BM, Saggar R, Saggar R, Plachevskiy V, Fishbein MC, Lynch JP, Ardehali A, Ross DJ, Elashoff RM, Belperio JA. {\smaller CXCR}3 Chemokine Ligands during Respiratory Viral Infections Predict Progressive Lung Allograft Dysfunction. {\color{Black}\textit{American Journal of Transplantation}} \textbf{2012} Feb; 12(2):477--484. PMCID: PMC3833088
+
+  \bibitem[13]{} Shino MY, Weigt SS, Saggar R, Elashoff D, Derhovanessian A, \textbf{Gregson AL}, Saggar R, Reed EF, Kubak BM, Lynch JP, Belperio JA, Ardehali A, Ross DJ. Usefulness of immune monitoring in lung transplantation using adenosine triphosphate production in activated lymphocytes. {\color{Black}\textit{The Journal of Heart and Lung Transplantation}} \textbf{2012} Sep; 31(9):996--1002. PMCID: \textit{pending}
+
+  \bibitem[14]{} \textbf{Gregson AL}, Wang X, Weigt SS, Elashoff R, Lynch JP III, Ross DJ, Kubak BM, Saggar R, Ardehali A, Li G, Belperio J. Interaction Between Pseudomonas and CXC Chemokines Increases Risk of {\smaller BOS} and Death in Lung Transplantation {\color{Black}\textit{American Journal of Respiratory and Critical Care Medicine}} \textbf{2013} Mar; 187(5):518--526. PMCID: PMC3733405
+
+  \bibitem[15]{} Weigt SS, Copeland CAF, Derhovanessian A, Shino MY, Davis WA, Snyder LD, \textbf{Gregson AL}, Saggar R, Lynch JP III, Ross DJ, Ardehali A, Elashoff RM, Palmer SM, Belperio JA. Colonization with Small Conidia Aspergillus Species Is Associated with Bronchiolitis Obliterans Syndrome: A Two-Center Validation Study. {\color{Black}\textit{American Journal of Transplantation}} \textbf{2013} Apr; 13(4):919--927. PMCID: PMC3618528
+
+  \bibitem[16]{} Shino MY, Weigt SS, Li N, Palchevskiy V, Derhovanessian A, Saggar R, Sayah DM, \textbf{Gregson AL}, Fishbein MC, Ardehali A, Ross DJ, Lynch JP 3rd, Elashoff RM, Belperio JA. CXCR3 Ligands Are Associated with the Continuum of Diffuse Alveolar Damage to Chronic Lung Allograft Dysfunction. {\color{Black}\textit{American Journal of Respiratory and Critical Care Medicine}} \textbf{2013} Nov; 9(1):1117--1125. PMCID: PMC3863740
+
+
+  \bibitem[17]{} Injean P, Hsiue PP, Vangala S, Miller LG, Benharash P, Brindis RG, McKinnell JA, \textbf{Gregson AL}. Survey of Pre-Operative Infection Prevention for {\smaller CABG} Procedures. {\color{Black}\textit{Infection Control \& Hospital Epidemiology}} \textbf{2014} Jun; 35(6):736-737. PMCID: PMC4169282.
+
+  \bibitem[18]{} Hsiue PP, \textbf{Gregson AL}, Injean P, Vangala S, Fonner E, Brindis RG, Parker J, Shemin RJ, Shahian DM, Miller LG, Benharash P, McKinnell JA. Antibiotic Selection for Coronary Artery Bypass Graft Procedures in an Era of Resistance. {\color{Black}\textit{Infection Control \& Hospital Epidemiology}} \textbf{2014} Jun; 35(6):737-740. PMCID: PMC4169278
+
+  \bibitem[19]{} \textbf{Gregson AL}, Wang X, Injean P, Weigt S, Shino M, Sayah D, DerHovanessian A, Lynch JP, Ross DJ, Saggar R, Ardehali A, Li G, Elashoff R, Belperio JA. Staphylococcus via an Interaction with the {\smaller ELR}\txsp{+} {\smaller CXC} Chemokine {\smaller ENA}-78 is Associated with {\smaller BOS}. {\color{Black}\textit{American Journal of Transplantation}} ~(\textit{in press}) PMCID \textit{pending, applied for}
+
+% \end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NOT USING IS PAINFUL %%%%%%%%%%%%%%%%%
+\newpage\section*{Acronyms}
+\begin{acronym}
+    \acro{apc}[APC]{antigen-presenting cell}
+    \acro{am}[AM$\phi$]{alveolar macrophage}
+    \acro{ar}[AR]{acute rejection}
+    \acro{ast}[AST]{American Society of Transplantation}
+    \acro{bal}[BAL]{bronchoalveolar lavage}
+    \acro{balf}[BALF]{bronchoalveolar lavage fluid}
+    \acro{blcl}[B-LCL]{B-lymphocyte cell lines}
+    \acro{bos}[BOS]{bronchiolitis obliterans syndrome}
+    \acro{cvd}[CVD]{Center for Vaccine Development}
+    \acro{dc}[DC]{dendritic cell}
+    \acro{mdc}[mDC]{myeloid dendritic cell}
+    \acro{idc}[iDC]{inflammatory dendritic cell}
+    \acro{pdc}[pDC]{plasmacytoid dendritic cell}
+    \acro{ebv}[EBV]{Epstein-Barr virus}
+    \acro{ecp}[ECP]{extracorporeal photopheresis}
+    \acro{fcs}[FCS]{fetal calf serum}
+    \acro{fev1}[FEV\textsubscript{1}]{forced expiratory volume in 1 s}
+    \acro{gcp}[GCP]{Good Clinical Practices}
+    \acro{gsk}[GSK]{GlaxoSmithKline Biologicals, Belgium}
+    \acro{hla}[HLA]{human leukocyte antigen}
+    \acro{id}[ID]{Infectious Diseases}
+    \acro{ifng}[IFN-$\gamma$]{$\gamma$ interferon}
+    \acro{irb}[IRB]{institutional review board}
+    \acro{ishlt}[ISHLT]{International Society for Heart \& Lung Transplantation}
+    \acro{mvi}[MVI]{Malaria Vaccine Initiative}
+    \acro{nih}[NIH]{National Institutes of Health}
+    \acro{nk}[NK]{natural killer cell}
+    \acro{nt}[NT]{{\smaller NK}-like T cell}
+    \acro{pi}[PI]{principal investigator}
+    \acro{pbmc}[PBMC]{peripheral blood mononuclear cells}
+    \acro{pbs}[PBS]{phosphate buffered solution}
+    \acro{pft}[PFT]{pulmonary function test}
+    \acro{sop}[SOP]{Standard Operating Procedures}
+    \acro{tgfb}[TGF-$\beta$]{transforming growth factor $\beta$}
+    \acro{tlr}[TLR]{toll-like receptors}
+    \acro{tnfa}[TNF-$\alpha$]{tumor necrosis factor $\alpha$}
+    \acro{treg}[T{}\textsubscript{reg}]{regulatory T lymphocyte}
+    \acro{ucla}[UCLA]{University of California, Los Angeles}
+    \acro{umb}[UMB-SOM]{University of Maryland School of Medicine}
+\end{acronym}
+% %% Sorted using <sort -bdf>
+
+\end{document}

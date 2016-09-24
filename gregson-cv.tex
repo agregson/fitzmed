@@ -1,26 +1,40 @@
-\documentclass[letterpaper,11pt,sans,final]{moderncv}%{./moderncv-font} 
+%%%%%%%%%%%
+%%%% note that this was modified for MODERNCV VERSION 2.0
+%%%% XELATEX must now be used to process this file
+%%%%%%%%%%%
+\documentclass[letterpaper,11pt,sans,final]{/usr/local/share/texmf-dist/tex/latex/moderncv/moderncv}%{./moderncv-font} 
 \moderncvtheme[blue]{classic}%
+\moderncvicons{awesome}
+\usepackage{moderncvcompatibility}
 % \moderncvtheme[blue]{classichackmine}%must use old latex
 % \moderncvtheme[blue]{casual}%FOR PHOTO
 % \moderncvtheme[grey]{classichack}%casual,classic,classichack
 %%% blue looks nice, but grey prints better
 \usepackage[english]{babel}
+% \usepackage{fontspec} % cannot use with fontenc and tgheros
 %\usepackage{hanging}
 \usepackage[scale=0.8]{geometry}
 \usepackage[smaller,printonlyused]{acronym}
+\usepackage{fontawesome}
+\usepackage{academicons}
 %\usepackage{multibib}
 % \usepackage[LGR,OT1]{fontenc} % setting for epigrafica
 % \usepackage{epigrafica} % does not do accents for Djimde's name; 11 pt for epigrafica
-% \usepackage[T1]{fontenc} % setting for TEX Gyre Heros
-% \usepackage{tgheros}%used 12 point for tgheros font; not working now with new version
-\usepackage{pslatex}
+\usepackage[T1]{fontenc} % setting for TEX Gyre Heros
+\usepackage{tgheros}%used 12 point for tgheros font; works, but only with fontenc and excluding fontspec
+\usepackage[T1]{fontenc} % setting for TEX Gyre Heros
+\usepackage{pslatex} % not sure what this is here for
 %%%%% Work-around for broken page numbering
 \usepackage{lastpage}
 \rfoot{\addressfont\itshape\textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
 
 \newcommand{\subscript}[1]{\ensuremath{_{\textsf{#1}}}}
 \newcommand{\txsp}[1]{\textsuperscript{#1}}
+\renewcommand*{\emailsymbol}         {\faEnvelope~~}   
+\renewcommand*{\faxphonesymbol}      {\faPrint~~} 
+\renewcommand\UrlFont{\sffamily} % to fix font in \nolinkurl
 
+%%%%%%%%%%% UCLA order of publications
 %% \newcites{peer,npeer,chp,rev,prep,abs}%
 %%    {Publications--Research Papers--Peer Reviewed,
 %%     Publications--Research Papers--non-Peer Reviewed,
@@ -29,11 +43,17 @@
 %%     Publications--Papers in Preparation (Research Completed),
 %%     Publications--Abstracts}
 
+%%%%%%%%%%%
 %% Personal data for moderncv
+
+%%% THIS ONE INCLUDES A PICTURE
+% \firstname{\includegraphics[scale=0.5]{/fitz/pictures/aricParis09apr}\\ \vspace{1.5cm} Aric L}
+
+%%%% THIS ONE IS STANDARD WITHOUT A PICTURE
 \firstname{Aric L}
 \familyname{Gregson}
 \title{Associate Professor}
-\address{14-154 Warren Hall 957119\\ University of California}{Los Angeles CA 90095}
+\address{University of California}{14-154 Warren Hall 957119}{Los Angeles, CA 90095--7119}
 \phone[fixed]{310-825-2591}
 \phone[mobile]{310-466-2685}
 % \fax{310-825-3632}
@@ -41,16 +61,30 @@
 \homepage{aorchid.bol.ucla.edu}
 \email{a.gregson@ucla.edu}
 \homepage{aorchid.bol.ucla.edu}
-\extrainfo{ORCID 0000-0001-6806-0868}
+%%%% social builtin always come before extrainfo
 \social[github]{agregson}
-% \extrainfo{NCBI http://www.ncbi.nlm.nih.gov/sites/myncbi/aric.gregson.1/bibliography/44851503/public/?sort=date&direction=ascending}
-% \extrainfo{NCBI https://www.ncbi.nlm.nih.gov/myncbi/aric.gregson.1/cv/139742/}
-% \photo[64pt]{/export/pictures/aricParis09apr}
+\social[linkedin]{aric-gregson}
+% \social[twitter]{daraprim}
+% \social[researchgate]{Aric\_Gregson} % someone wrote a patch for this and Orcid, but I could not get it to work
+%%% 
+%%% CAN ONLY HAVE ONE EXTRAINFO section; put all into one and will work
+%%% must escape the ampersands even in \href
+%%% 
+ \extrainfo{\aiResearchGate~\href{https://www.researchgate.net/profile/Aric_Gregson}{\nolinkurl{Aric_Gregson}}\\
+   \aiOrcid~\href{https://orcid.org/0000-0001-6806-0868}{\nolinkurl{0000-0001-6806-0868}}\\ 
+   \aiPubMed~\href{http://www.ncbi.nlm.nih.gov/sites/myncbi/aric.gregson.1/bibliography/44851503/public/?sort=date\&direction=ascending}{\nolinkurl{myNCBI}}\\
+   \aiGoogleScholar~\href{https://scholar.google.com/citations?hl=en\&user=MogdjA0AAAAJ\&view_op=list_works\&gmla=AJsN-F630UHADfZm4s0vWCFRZx7fk8R7UWetyqYT7Hw7lErbNFL-DhMBeecJ79ajeAoq36ZWpy54nHufpSuXs7YJa0mhzeeuDPmyluaRSBm4jLoz_Y1eqaOs-tX7_uf0EapeSNewMyh2}{\nolinkurl{Aric Gregson}}\\
+   \aiPubMed~\href{https://www.ncbi.nlm.nih.gov/myncbi/aric.gregson.1/cv/139742/}{\nolinkurl{Biosketch}}
+   }
+
+%%%% to include PHOTO properly; requires a fix DOES NOT WORK NOW 2016, see above for workaround if want picture
+% \photo[64pt]{/fitz/pictures/aricParis09apr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  gregson-cv.tex
 % should be able to update scopus cites with this link <http://www.scopus.com/results/results.url?sort=plf-f&src=s&st1=gregson&st2=A&nlo=1&nlr=20&nls=count-f&sid=AFE4F9BA8F397BEA10A9EE5867F44C46.ZmAySxCHIBxxTXbnsoe5w%3a133&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&txGid=AFE4F9BA8F397BEA10A9EE5867F44C46.ZmAySxCHIBxxTXbnsoe5w%3a13>
 %
+%   - updated September 2016. Transitioned to moderncv 2.0 version with new favicons for more social links and now using xelatex
 %   - updated Apr/May 2016. Cleaned up and added in press manuscripts and submitted ones, updated for UCSD
 %   - updated Mar 2016. Added PMC # for staph AJT, two more posters.
 %   - updated Dec 2015. More updates for job apps, JHLT guidelines, viral poster, ariss tgf-b paper, updated ref numbers and new impacts
@@ -183,10 +217,15 @@
 
 \section{Professional Activities}
 
+%  \cventry{2016--present}{Member, American Health Council}{}{}{}{}
 \cventry{2016--present}{Basic Science Council Liason}{Infectious Diseases Council}{International Society for Heart \& Lung Transplantation}{}{}
-\cventry{2014--present}{Planning \& Land Use Management Committee Member}{West Los Angeles Neighborhood Council}{Los Angeles}{}{}
+\cventry{2016--present}{Site Co-Investigator}{Chimerix 351}{An Intermediate-size, Expanded Access Protocol to Provide Brincidofovir for the Treatment of Serious Adenovirus Infection or Disease}{{\smaller UCLA} Medical Center}{}
+\cventry{2015--present}{Site Co-Investigator}{Merck MK-8228}{MK-8228 vs.\ Placebo in Prevention of Cytomegalovirus ({\smaller CMV}) Infection in Hematopoietic Stem Cell Transplant ({\smaller HSCT}) Recipients}{{\smaller UCLA} Medical Center}{}
+\cventry{2015--present}{Site Co-Investigator}{{\smaller REACT}}{A Prospective Observational Trial to Evaluate Hematopoietic Stem Cell Transplantation {\smaller CMV} Reactivation Events---Assessed by a {\smaller CMV}-specific {\smaller T-SPOT} Assay}{{\smaller UCLA} Medical Center}{}
+\cventry{2014--present}{Site Co-Investigator}{Chimerix 333}{{\smaller CMX}001 Registry: A Prospective Observational Study for the Long-term Follow-up of Subjects Previously Enrolled in {\smaller CMX}001}{{\smaller UCLA} Medical Center}{}
+\cventry{2014--present}{Planning \& Land Use Management Committee Member}{West Los Angeles Sawtelle Neighborhood Council}{Los Angeles}{}{}
 \cventry{2013--present}{Member, P \& T Antibiotic Subcommittee}{{\smaller UCLA} Medical Center}{Los Angeles}{}{}
-\cventry{2013--present}{Site Co-Investigator}{{\smaller CMX301XX-CMX001}}{{\smaller UCLA} Medical Center \& Chimerix, Incorporated}{Los Angeles}{A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Multicenter, Phase 3 Study of the Safety, Tolerability, and Efficacy of {\smaller CMX}001 for the Prevention of Cytomegalovirus ({\smaller CMV}) Infection in {\smaller CMV}-seropositive (R\txsp{+}) Hematopoietic Stem Cell Transplant Recipients, {\smaller NCT}01769170.}
+\cventry{2013--2014}{Site Co-Investigator}{{\smaller CMX301XX-CMX001}}{{\smaller UCLA} Medical Center \& Chimerix, Incorporated}{Los Angeles}{A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Multicenter, Phase 3 Study of the Safety, Tolerability, and Efficacy of {\smaller CMX}001 for the Prevention of Cytomegalovirus ({\smaller CMV}) Infection in {\smaller CMV}-seropositive (R\txsp{+}) Hematopoietic Stem Cell Transplant Recipients, {\smaller NCT}01769170.}
 \cventry{2012--2014}{Clinical Collaborator/Adviser}{Amanda Silberstein, PhD Student}{{\smaller UCLA} Chemistry Department, Neil Garg Laboratory, Organic Chemistry}{Los Angeles}{The Development of Iron-Catalyzed Cross-Coupling Reactions and their Application to the Synthesis of Anti-Malarial Compounds.}
 \cventry{2012--present}{Site Co-Investigator}{{\smaller CAPSIL}}{{\smaller UCLA} Medical Center \& {\smaller NIH}/{\smaller DMID}}{}{Prophylaxis Versus Preemptive Therapy for the Prevention of {\smaller CMV} in High-Risk R\txsp{-}D\txsp{+} Liver Transplant Recipients, {\smaller NCT}01552369.}
 \cventry{2012--2015}{Site Co-Principle Investigator}{{\smaller DEFLECT-1}}{{\smaller UCLA} Medical Center \& Optimer Pharmaceuticals, Inc}{Los Angeles}{A Phase 3b Multi-Center, Double-Blind, Randomized, Placebo Controlled Study to Demonstrate the Safety and Efficacy of Fidaxomicin for Prophylaxis against Clostridium difficile-Associated Diarrhea in Adults Undergoing Hematopoietic Stem Cell Transplantation, {\smaller NCT}01691248.}
@@ -677,5 +716,7 @@ relevant CLAD phenotypes in bilateral and single lung transplant recipients. \te
 
 \end{thebibliography}
 
+\vfill
 
+Last updated \today
 \end{document}

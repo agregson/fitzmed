@@ -5,8 +5,8 @@
 % \documentclass[letterpaper,11pt,sans,dvipsnames,final]{/usr/local/share/texmf-dist/tex/latex/moderncv/moderncv}%{./moderncv-font} 
 \documentclass[letterpaper,11pt,sans,dvipsnames,final]{moderncv}%{./moderncv-font} 
 \moderncvtheme[blue]{classic}%
-\moderncvicons{awesome}
-\usepackage{moderncvcompatibility}
+% \moderncvicons{awesome}
+% \usepackage{moderncvcompatibility}
 % \moderncvtheme[blue]{classichackmine}%must use old latex
 % \moderncvtheme[blue]{casual}%FOR PHOTO
 % \moderncvtheme[grey]{classichack}%casual,classic,classichack
@@ -16,12 +16,12 @@
 %\usepackage{hanging}
 \usepackage[scale=0.8]{geometry}
 \usepackage[smaller,printonlyused]{acronym}
-\usepackage{./fontawesome}
-\usepackage{academicons}
+\usepackage{./fontawesome} %% \usepackage{./fontawesome} % for thinkenv
+\usepackage{academicons} % are note working on thinkenv
 %\usepackage{multibib}
 % \usepackage[LGR,OT1]{fontenc} % setting for epigrafica
 % \usepackage{epigrafica} % does not do accents for Djimde's name; 11 pt for epigrafica
-% \usepackage[T1]{fontenc} % setting for TEX Gyre Heros
+\usepackage[T1]{fontenc} % setting for TEX Gyre Heros
 \usepackage{tgheros}%used 12 point for tgheros font; works, but only with fontenc and excluding fontspec
 \usepackage[T1]{fontenc} % setting for TEX Gyre Heros
 % \usepackage{pslatex} % not sure what this is here for
@@ -31,10 +31,17 @@
 
 \newcommand{\subscript}[1]{\ensuremath{_{\textsf{#1}}}}
 \newcommand{\txsp}[1]{\textsuperscript{#1}}
-\renewcommand*{\emailsymbol}         {\faEnvelope~~}   
-\renewcommand*{\faxphonesymbol}      {\faPrint~~} 
+\def\envelope{{\FA \faEnvelope}}
+\def\print{{\FA \faPrint}}
+% \renewcommand*{\emailsymbol}         {\envelope~~}   \def\faEnvelope
+% \renewcommand*{\faxphonesymbol}      {\print~~} 
 \renewcommand\UrlFont{\sffamily} % to fix font in \nolinkurl
-
+%% from fontawesome
+% \newfontfamily{\FA}{FontAwesome Regular}	
+\def\twitter{{\FA \faTwitter}}
+\def\github{{\FA \faGithub}}
+\def\linkedin{{\FA \faLinkedin}}
+% \def\pencil{{\FA \faPencil}}
 %%%%%%%%%%% UCLA order of publications
 %% \newcites{peer,npeer,chp,rev,prep,abs}%
 %%    {Publications--Research Papers--Peer Reviewed,
@@ -58,25 +65,29 @@
 \address{AG Infectious Diseases, A Medical Corporation}{11301 W Olympic Blvd, Suite 435}{Los Angeles, CA 90064--1653}
 \phone[fixed]{424-256-6682}
 \phone[mobile]{310-466-2685}
-% \fax{310-825-3632}
 \phone[fax]{310-388-5265}
-%   \homepage{aorchid.bol.ucla.edu}
 \email{agregson@countermail.com}
-% \homepage{aorchid.bol.ucla.edu}
+\homepage{agregson.github.io/fitzlab}
 %%%% social builtin always come before extrainfo
 \social[github]{agregson}
 \social[linkedin]{aric-gregson}
-% \social[twitter]{daraprim}
+\social[twitter]{daraprim}
 % \social[researchgate]{Aric\_Gregson} % someone wrote a patch for this and Orcid, but I could not get it to work
 %%% 
 %%% CAN ONLY HAVE ONE EXTRAINFO section; put all into one and will work
 %%% must escape the ampersands even in \href
 %%% 
- \extrainfo{\aiResearchGate~\href{https://www.researchgate.net/profile/Aric_Gregson}{\nolinkurl{Aric_Gregson}}\\
-   \aiOrcid~\href{https://orcid.org/0000-0001-6806-0868}{\nolinkurl{0000-0001-6806-0868}}\\ 
-   \aiPubMed~\href{http://www.ncbi.nlm.nih.gov/sites/myncbi/aric.gregson.1/bibliography/44851503/public/?sort=date\&direction=ascending}{\nolinkurl{myNCBI}}\\
-   \aiGoogleScholar~\href{https://scholar.google.com/citations?hl=en\&user=MogdjA0AAAAJ\&view_op=list_works\&gmla=AJsN-F630UHADfZm4s0vWCFRZx7fk8R7UWetyqYT7Hw7lErbNFL-DhMBeecJ79ajeAoq36ZWpy54nHufpSuXs7YJa0mhzeeuDPmyluaRSBm4jLoz_Y1eqaOs-tX7_uf0EapeSNewMyh2}{\nolinkurl{Aric Gregson}}\\
-   \aiPubMed~\href{https://www.ncbi.nlm.nih.gov/myncbi/aric.gregson.1/cv/139742/}{\nolinkurl{Biosketch}}
+ % \extrainfo{\aiResearchGate~\href{https://www.researchgate.net/profile/Aric_Gregson}{\nolinkurl{Aric_Gregson}}\\
+ %   \aiOrcid~\href{https://orcid.org/0000-0001-6806-0868}{\nolinkurl{0000-0001-6806-0868}}\\ 
+ %   \aiPubMed~\href{http://www.ncbi.nlm.nih.gov/sites/myncbi/aric.gregson.1/bibliography/44851503/public/?sort=date\&direction=ascending}{\nolinkurl{myNCBI}}\\
+ %   \aiGoogleScholar~\href{https://scholar.google.com/citations?hl=en\&user=MogdjA0AAAAJ\&view_op=list_works\&gmla=AJsN-F630UHADfZm4s0vWCFRZx7fk8R7UWetyqYT7Hw7lErbNFL-DhMBeecJ79ajeAoq36ZWpy54nHufpSuXs7YJa0mhzeeuDPmyluaRSBm4jLoz_Y1eqaOs-tX7_uf0EapeSNewMyh2}{\nolinkurl{Aric Gregson}}\\
+ %   \aiPubMed~\href{https://www.ncbi.nlm.nih.gov/myncbi/aric.gregson.1/cv/139742/}{\nolinkurl{Biosketch}}
+ %   }
+ \extrainfo{\href{https://www.researchgate.net/profile/Aric_Gregson}{\nolinkurl{Research Gate}}\\% Aric_Gregson
+   \href{https://orcid.org/0000-0001-6806-0868}{\nolinkurl{0000-0001-6806-0868}}\\ 
+   \href{http://www.ncbi.nlm.nih.gov/sites/myncbi/aric.gregson.1/bibliography/44851503/public/?sort=date\&direction=ascending}{\nolinkurl{myNCBI}}\\
+   \href{https://scholar.google.com/citations?hl=en\&user=MogdjA0AAAAJ\&view_op=list_works\&gmla=AJsN-F630UHADfZm4s0vWCFRZx7fk8R7UWetyqYT7Hw7lErbNFL-DhMBeecJ79ajeAoq36ZWpy54nHufpSuXs7YJa0mhzeeuDPmyluaRSBm4jLoz_Y1eqaOs-tX7_uf0EapeSNewMyh2}{\nolinkurl{Google Scholar}}\\
+   % PubMed~\href{https://www.ncbi.nlm.nih.gov/myncbi/aric.gregson.1/cv/139742/}{\nolinkurl{Biosketch}}
    }
 
 %%%% to include PHOTO properly; requires a fix DOES NOT WORK NOW 2016, see above for workaround if want picture
@@ -187,65 +198,83 @@
 % \cvline{Marital Status}{Married to Xochitl Gonzalez, {\smaller MFA}}
 
 \section{Education}
-\cventry{1988--1992}{B.A. with Thesis}{University of California}{Santa Cruz}{}{}
-\cventry{1993--1997}{M.D.}{University of California, School of Medicine}{Los Angeles}{}{}
-\cventry{1997--1998}{Internship}{Department of Medicine {\smaller LAC} Harbor-{\smaller UCLA} Medical Center}{Torrance}{}{}
-\cventry{1998--2000}{Residency}{Department of Medicine {\smaller LAC} Harbor-{\smaller UCLA} Medical Center}{Torrance}{}{}
-\cventry{2001--2003}{Clinical Fellowship}{Division of Infectious Diseases, Department of Medicine, University of Maryland Medical System, Baltimore {\smaller VA} \& Shock Trauma}{Baltimore}{}{}\cventry{2003--2005}{Vaccinology Fellowship}{Malaria Section, Center for Vaccine Development, University of Maryland School of Medicine}{Baltimore}{}{}
+\cventry{1988--1992}{B.A. with Thesis}{University of California}{Santa Cruz}{}{Phi Beta Kappa, College Honors, Honors in Biology}
+\cventry{1993--1997}{M.D.}{University of California, School of Medicine}{Los Angeles}{}{Alpha Omega Alpha, Letters of Distinction in Doctoring \& Pediatrics}
+\cventry{1997--1998}{Internship}{Department of Medicine {\smaller LAC} Harbor-{\smaller UCLA} Medical Center}{Torrance}{}{Internal Medicine}
+\cventry{1998--2000}{Residency}{Department of Medicine {\smaller LAC} Harbor-{\smaller UCLA} Medical Center}{Torrance}{}{Internal Medicine}
+\cventry{2001--2003}{Clinical Fellowship}{Division of Infectious Diseases, Department of Medicine, University of Maryland Medical System, Baltimore {\smaller VA} \& Shock Trauma}{Baltimore}{}{Infectious Diseases}
+\cventry{2003--2005}{Vaccinology Fellowship}{Malaria Section, Center for Vaccine Development, University of Maryland School of Medicine}{Baltimore}{}{Malariology, Clinical Vaccinology}
 
 \section{Licensure}
 %\cventrynoperiod{1999--present}{California}{A68156}{Active}{}{}
-\cventry{1999--present}{California}{A68156}{Active}{}{}
+\cventry{1999--\smaller{present}}{California}{A68156}{Active}{}{}
 \cventry{2001--2007}{Maryland}{D57097}{Inactive}{}{}
 
 \section{Board Certification}
 \cventry{2000--2010}{Diplomate}{American Board of Internal Medicine \emph{Internal Medicine}}{}{}{}
-\cventry{2003--present}{Diplomate}{American Board of Internal Medicine \emph{Infectious Diseases}}{}{}{}
-\cventry{2016--2020}{Diplomate}{National Board of Physicians and Surgeons}{Internal Medicine \& Infectious Diseases}{}{}
+\cventry{2003--{\smaller present}}{Diplomate}{American Board of Internal Medicine \emph{Infectious Diseases}}{}{}{}
+\cventry{2016--{\smaller present}}{Diplomate}{National Board of Physicians and Surgeons}{Internal Medicine \& Infectious Diseases}{}{}% until 2020
 
 \section{Professional Positions}% begin with present position
-\cventry{2017--present}{President / Chief Executive Officer}{AG Infectious Diseases}{Los Angeles}{}{}
-\cventry{2014--2017}{Health Sciences Associate Clinical Professor of Medicine}{Division of Infectious Diseases, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Transplant Infectious Diseases {\smaller UCLA} Heart \& Lung Transplant Program; Liver, Small Bowel \& Pancreas Transplant Program; Stem Cell Transplant Program.}%
-\cventry{2009--2014}{Health Sciences Assistant Clinical Professor of Medicine}{Divisions of Infectious Diseases \& General Internal Medicine, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Transplant Infectious Diseases {\smaller UCLA} Heart \& Lung Transplant Program; Liver, Small Bowel \& Pancreas Transplant Program; Stem Cell Transplant Program.}%
-\cventry{2007--2009}{Assistant Clinical Professor of Medicine}{Division of Infectious Diseases, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Transplant Infectious Diseases {\smaller UCLA} Heart \& Lung Transplant \& Cardiac Assist Device Program.}%
-\cventry{2006--2007}{Clinical Instructor of Medicine}{Division of Infectious Diseases, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Transplant Infectious Diseases {\smaller UCLA} Heart \& Lung Transplant \& Cardiac Assist Device Program.}%
-\cventry{2005--2006}{Consultant, Clinical Vaccinologist}{{\smaller PATH}'s Malaria Vaccine Initiative}{Bethesda}{}{{\smaller RTS,S} Program Officer.}
+\cventry{2017--{\smaller present}}{President / Chief Executive Officer}{AG Infectious Diseases}{Los Angeles}{}{Founded AGID to provide excellence in all aspects of Infectious Diseases}
+%% UCLA
+\cventry{2014--2017}{Health Sciences Associate Clinical Professor of Medicine}{Division of Infectious Diseases, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Led translational research program investigating alloimmune responses in lung transplant recipients. Consultant for Heart \& Lung, Liver, Small Bowel \& Pancreas and Stem Cell Transplant Programs, and General ID Teaching Service.}%
+\cventry{2009--2014}{Health Sciences Assistant Clinical Professor of Medicine}{Divisions of Infectious Diseases \& General Internal Medicine, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Led translational research program investigating alloimmune responses in lung transplant recipients. Consultant for Heart \& Lung, Liver, Small Bowel \& Pancreas and Stem Cell Transplant Programs, and General ID Teaching Service.}%
+\cventry{2007--2009}{Assistant Clinical Professor of Medicine}{Division of Infectious Diseases, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Developing translational research program investigating alloimmune responses in lung transplant recipients. Consultant for the Heart \& Lung Transplant \& Cardiac Assist Device Programs and the General ID Teaching Service.}%
+\cventry{2006--2007}{Clinical Instructor of Medicine}{Division of Infectious Diseases, Department of Medicine, {\smaller UCLA} School of Medicine}{Los Angeles}{}{Initiated first translational research program in alloimmunity within the Division of Infectious Diseases. Consultant for the Heart \& Lung Transplant \& Cardiac Assist Device Programs and the General ID Teaching Service.}%
+%%% PATH
+\cventry{2005--2006}{Consultant, Clinical Vaccinologist}{{\smaller PATH}'s Malaria Vaccine Initiative}{Bethesda}{}{{\smaller RTS,S} Malaria Vaccine Program Officer. Overseeing safety in African trails, developing vaccine protocols, {\smaller EPI} integration.}
+%%% UMD
 \cventry{2002--2005}{Attending Physician \& Clinical Instructor}{Division of Emergency Medicine, Department of Surgery, University of Maryland School of Medicine \& Baltimore {\smaller VA} Medical Center}{Baltimore}{}{Emergency medicine practice \& resident teaching in metropolitan {\smaller VA ED} with high acuity.}
 \cventry{2003--2005}{Attending Physician \& Clinical Instructor}{Division of Geographic Medicine, Department of Medicine, University of Maryland School of Medicine}{Baltimore}{}{}
 \cventry{2003--2005}{Attending Physician}{Traveller's Clinic, Department of Medicine, University of Maryland School of Medicine}{Baltimore}{}{}
 \cventry{2001--2003}{Assistant Clinical Instructor of Medicine}{Division of Infectious Diseases, Department of Medicine, University of Maryland Medical System}{Baltimore}{}{}
+%% Kaiser
 \cventry{2000--2001}{Attending Physician}{Department of Emergency Medicine, Kaiser Permanente West Los Angeles Medical Center}{Los Angeles}{}{Emergency medicine practice in busy, metropolitan {\smaller ED} with city 911 traffic \& high acuity.}
 \cventry{2000--2001}{Attending Physician}{Department of Medicine, Kaiser Permanente Bellflower Medical Center}{Bellflower}{}{Hospitalist on inpatient medical service.}
 \cventry{2000}{Attending Physician}{Department of Family Medicine, Kaiser Permanente}{Harbor City \& West Los Angeles}{}{Urgent care.}
+%% EMT
 \cventry{1992--1993}{Emergency Medical Technician-{\smaller D}}{Long Beach Memorial Medical Center}{Long Beach}{}{Medical \& cardiac intensive care service.}
 \cventry{1990--1992}{Emergency Medical Technician-{\smaller D}}{San Benito County {\smaller EMS}}{Hollister}{}{Emergency ambulance service providing 911 coverage to all of San Benito County.}
 
 \section{Professional Activities}
 
 %  \cventry{2016--present}{Member, American Health Council}{}{}{}{}
-\cventry{2018--present}{Member, CME Committee}{Providence Saint Joseph Medical Center}{Burbank}{}{}
-\cventry{2017--present}{Expert Reviewer}{Medical Board of California}{Infectious Diseases area of specialization}{}{}
-\cventry{2016--present}{Basic Science Council Liason}{Infectious Diseases Council}{International Society for Heart \& Lung Transplantation}{}{}
+\cventry{2018--{\smaller present}}{{\smaller CME} Committee}{Providence Saint Joseph Medical Center}{Burbank}{}{}
+
+\cventry{2017--{\smaller present}}{Expert Reviewer}{Medical Board of California}{Los Angeles}{}{Infectious Diseases area of specialization}
+
+\cventry{2017--{\smaller present}}{{\smaller BAL} Standardization Subgroup 5}{International Society for Heart \& Lung Transplantation}{Los Angeles}{}{Development of a consensus statement on Standardization of Bronchoalveolar Lavage in Lung Transplantation. Subgroup 5 is focused on research uses of {\smaller BAL}}
+
+\cventry{2016--{\smaller present}}{Basic Science Council Liaison to the Infectious Diseases Council}{International Society for Heart \& Lung Transplantation}{Los Angeles}{}{}
+
 \cventry{2016--2017}{Site Co-Investigator}{Chimerix 351}{An Intermediate-size, Expanded Access Protocol to Provide Brincidofovir for the Treatment of Serious Adenovirus Infection or Disease}{{\smaller UCLA} Medical Center}{}
 \cventry{2015--2017}{Site Co-Investigator}{Merck MK-8228}{MK-8228 vs.\ Placebo in Prevention of Cytomegalovirus ({\smaller CMV}) Infection in Hematopoietic Stem Cell Transplant ({\smaller HSCT}) Recipients}{{\smaller UCLA} Medical Center}{}
 \cventry{2015--2017}{Site Co-Investigator}{{\smaller REACT}}{A Prospective Observational Trial to Evaluate Hematopoietic Stem Cell Transplantation {\smaller CMV} Reactivation Events---Assessed by a {\smaller CMV}-specific {\smaller T-SPOT} Assay}{{\smaller UCLA} Medical Center}{}
 \cventry{2014--2017}{Site Co-Investigator}{Chimerix 333}{{\smaller CMX}001 Registry: A Prospective Observational Study for the Long-term Follow-up of Subjects Previously Enrolled in {\smaller CMX}001}{{\smaller UCLA} Medical Center}{}
-\cventry{2014--2017}{Planning \& Land Use Management Committee Member}{West Los Angeles Sawtelle Neighborhood Council}{Los Angeles}{}{}
+
+\cventry{2014--2017}{Planning \& Land Use Management Committee Member}{West Los Angeles Sawtelle Neighborhood Council}{Los Angeles}{}{Was awarded Certificate of Appreciation by Councilman Bonin.}
 \cventry{2013--2017}{Member, P \& T Antibiotic Subcommittee}{{\smaller UCLA} Medical Center}{Los Angeles}{}{}
+
 \cventry{2013--2014}{Site Co-Investigator}{{\smaller CMX301XX-CMX001}}{{\smaller UCLA} Medical Center \& Chimerix, Incorporated}{Los Angeles}{A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group, Multicenter, Phase 3 Study of the Safety, Tolerability, and Efficacy of {\smaller CMX}001 for the Prevention of Cytomegalovirus ({\smaller CMV}) Infection in {\smaller CMV}-seropositive (R\txsp{+}) Hematopoietic Stem Cell Transplant Recipients, {\smaller NCT}01769170.}
+
 \cventry{2012--2014}{Clinical Collaborator/Adviser}{Amanda Silberstein, PhD Student}{{\smaller UCLA} Chemistry Department, Neil Garg Laboratory, Organic Chemistry}{Los Angeles}{The Development of Iron-Catalyzed Cross-Coupling Reactions and their Application to the Synthesis of Anti-Malarial Compounds.}
+
 \cventry{2012--2017}{Site Co-Investigator}{{\smaller CAPSIL}}{{\smaller UCLA} Medical Center \& {\smaller NIH}/{\smaller DMID}}{}{Prophylaxis Versus Preemptive Therapy for the Prevention of {\smaller CMV} in High-Risk R\txsp{-}D\txsp{+} Liver Transplant Recipients, {\smaller NCT}01552369.}
 \cventry{2012--2015}{Site Co-Principle Investigator}{{\smaller DEFLECT-1}}{{\smaller UCLA} Medical Center \& Optimer Pharmaceuticals, Inc}{Los Angeles}{A Phase 3b Multi-Center, Double-Blind, Randomized, Placebo Controlled Study to Demonstrate the Safety and Efficacy of Fidaxomicin for Prophylaxis against Clostridium difficile-Associated Diarrhea in Adults Undergoing Hematopoietic Stem Cell Transplantation, {\smaller NCT}01691248.}
+
 \cventry{2012--2015}{Member, Expert Fungal Panel}{Scientific Council on Infectious Diseases}{International Society for Heart \& Lung Transplantation}{}{}
+
 \cventry{2012--2013}{Site Co-Investigator}{Maribavir/Protocol 1263-202}{{\smaller UCLA} Medical Center \& ViroPharma Incorporated}{Los Angeles}{A Phase 2, Randomized Study to Assess the Safety and Anti-Cytomegalovirus ({\smaller CMV}) Activity of Different Doses of Maribavir for Treatment of {\smaller CMV} Infections that are Resistant or Refractory to Treatment with Ganciclovir/Valganciclovir or Foscarnet in Transplant Recipients, {\smaller NCT}01611974.}
 \cventry{2012--2013}{Member, Infectious Diseases Management Program}{{\smaller UCLA} Medical Center}{Los Angeles}{}{}
-\cventry{2012--present}{Associate Editor}{{\smaller PL}o{\smaller S} Neglected Tropical Diseases}{}{}{}
+\cventry{2012--{\smaller present}}{Associate Editor}{{\smaller PL}o{\smaller S} Neglected Tropical Diseases}{}{}{}
 \cventry{2012--2017}{Editorial Board}{Dataset Papers in Medicine}{}{}{}{}
 \cventry{2012--2017}{Principle Investigator}{{\smaller CDC IND} for Pentostam}{{\smaller UCLA} Medical Center}{Los Angeles}{Use of sodium stibogluconate for the treatment of cutaneous and mucocutaneous leishmania.}
-\cventry{2011--present}{Infectious diseases outcomes investigations}{{\smaller UCLA} Medical Center}{Los Angeles}{}{Utilize hospital-wide data to investigate selective pressure in development of and outcomes for various hospital related infections at {\smaller UCLA}. Focused on {\smaller VRE} \& {\smaller CRE} blood stream infections in collaboration with Dr.\ James McKinnell ({\smaller LA} BioMed \& {\smaller UCLA CTSI}).}
+
+\cventry{2011--{\smaller present}}{Infectious diseases outcomes investigations}{{\smaller UCLA} Medical Center}{Los Angeles}{}{Utilize hospital-wide data to investigate selective pressure in development of and outcomes for various hospital related infections at {\smaller UCLA}. Focused on {\smaller VRE} \& {\smaller CRE} blood stream infections in collaboration with Dr.\ James McKinnell ({\smaller LA} BioMed \& {\smaller UCLA CTSI}).}
 \cventry{2010--2014}{At-Large Representative}{West Los Angeles Neighborhood Council}{Los Angeles}{}{}
-\cventry{2008--present}{Medical Advisory Committee}{Fertility Cryobank, {\smaller LLC}}{Los Angeles}{}{}
-\cventry{2007--present}{Academic Editor}{{\smaller PL}o{\smaller S} {\smaller ONE}}{}{}{}
+\cventry{2008--{\smaller present}}{Medical Advisory Committee}{Fertility Cryobank, {\smaller LLC}}{Los Angeles}{}{}
+\cventry{2007--{\smaller present}}{Academic Editor}{{\smaller PL}o{\smaller S} {\smaller ONE}}{}{}{}
 \cventry{2007--2017}{Lung Transplant Executive Committee}{{\smaller UCLA} Medical Center}{Los Angeles}{}{}
 \cventry{2007--2009}{Heart Transplant Executive Committee}{{\smaller UCLA} Medical Center}{Los Angeles}{}{}
 \cventry{2007--2008}{Immune profiling orthotopic heart transplant recipients}{{\smaller UCLA} \& Stanford School of Medicine}{Los Angeles \& Stanford}{}{Utilize phosphoproteomic-flow cytometry in collaboration with Drs.\ Daniel Cruz ({\smaller UCLA} Cardiology) \& Peter Krutzik (Stanford--Nolan Lab).}
@@ -264,37 +293,48 @@
 \cventry{1996}{Diagnostic Parasitology Independent Study}{{\smaller UCLA} Clinical Parasitology Laboratory \& {\smaller UCLA} Travel Clinic (Dr.\ Claire Panosian)}{Los Angeles}{}{}
 
 \section{Professional Memberships}
-\cventry{2013--present}{Infectious Diseases Society of America}{}{}{}{}
-\cventry{2010--present}{Randonneurs {\smaller USA}}{(\#6744)}{}{}{}
-\cventry{2006--present}{American Society of Transplantation}{}{}{}{}
-\cventry{2006--present}{International Society for Heart \& Lung Transplantation}{}{}{}{}
+\cventry{2013--{\smaller present}}{Infectious Diseases Society of America}{Fellow}{}{}{}
+\cventry{2010--2016}{Randonneurs {\smaller USA}}{\#6744}{}{}{}
+\cventry{2006--{\smaller present}}{American Society of Transplantation}{}{}{}{}
+\cventry{2006--{\smaller present}}{International Society for Heart \& Lung Transplantation}{}{}{}{}
 \cventry{2000--2007}{American Society of Tropical Medicine \& Hygiene}{}{}{}{}
+
+\subsection{Languages}
+\cventry{}{English}{Native tongue}{}{}{}
+\cventry{}{Spanish}{Medical and conversational, fair writing and reading}{}{}{}
+\cventry{}{German}{Limited reading, writing and speaking}{}{}{}
+\cventry{}{French}{Limited conversational speaking}{}{}{}
 
 \subsection{\emph{Ad Hoc} Reviewer}
 \cventry{}{Lancet Respiratory Medicine, Annals of Internal Medicine, Clinical Infectious Diseases, Journal of Infectious Diseases, Journal of the American Medical Association, Vaccine, American Journal of Transplantation, Journal of Heart \& Lung Transplantation, Transplantation, Transplant Infectious Diseases, Clinical Transplantation, {\smaller PLOS} Neglected Tropical Diseases, American Journal of Tropical Medicine and Hygiene, Molecular and Biochemical Parasitology, {\smaller ACP PIER} Modules, Clinical Dermatology}{}{}{}{}
-
-\subsection{Languages}
-\cventry{}{English \& Spanish}{}{}{}{}
 
 
 \closesection{}
 %\newpage
 \section{Honors and Special Awards}
-\cventry{2017}{Election to Fellow}{Infectious Diseases Society of America}{Research Track}{}{}{}{}
-\cventry{2017}{Invited Lecturer}{When the Rubber Hits the Road: Case and Panel Discussions}{{\smaller ISHLT} 2017 Academy: Core Competencies for Infectious Diseases in Cardiothoracic Transplantation and Mechanical Circulatory Support}{San Diego, CA}{}{}{}
-\cventry{2016}{Invited Lecturer}{The Role of Bacterial Infection in Bronchiolitis Obliterans Syndrome in Lung Transplantation}{Inaguaral Meeting, ASM Microbe (ASM/ICACC 2016)}{Boston, MA}{}{}{}
+\cventry{2018}{Selected to Participate}{Annual Customer Photography Show}{Blue Moon Camera \& Machine}{Portland, OR}{}{}{}
+
+\cventry{2017}{Election to Fellow}{Research Track}{Infectious Diseases Society of America}{}{}{}{}{}
+\cventry{2017}{Invited Lecturer}{``Transplant ID: Year in Review''}{ASM Microbe}{Atlanta, GA}{}{}{}
+\cventry{2017}{Invited Lecturer}{``When the Rubber Hits the Road: Case and Panel Discussions''}{{\smaller ISHLT} 2017 Academy: Core Competencies for Infectious Diseases in Cardiothoracic Transplantation and Mechanical Circulatory Support}{San Diego, CA}{}{}{}
+\cventry{2016}{Invited Lecturer}{``The Role of Bacterial Infection in Bronchiolitis Obliterans Syndrome in Lung Transplantation''}{Inaugural Meeting, ASM Microbe (ASM/ICACC 2016)}{Boston, MA}{}{}{}
 \cventry{2014}{Certificate of Appreciation}{Outstanding Contribution to Lecture Series}{Medical Engineering Department, Engineering \&
 Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 \cventry{2014}{Certificate of Recognition}{Outstanding Service to the City of Los Angeles, 11\txsp{th} District}{Councilman Mike Bonin}{Los Angeles, CA}{}{}{}
-\cventry{2014}{Invited Lecturer}{Treatment of Invasive Fungal Infections: State of the Art. Consensus Guidelines \& Recommendations ISHLT Fungal Expert Panel}{34\txsp{th} Annual Meeting, San Diego, California}{}{}{}
-\cventry{2013}{Invited Lecturer}{The Role of Bacterial Infection \& Colonization on Chronic Allograft Dysfunction}{International Society for Heart \& Lung Transplantation}{33\txsp{rd} Annual Meeting, Montr\'{e}al, Canada}{}{}{}
-\cventry{2011}{Clinical and Health Services Research Award, Junior Faculty}{Department of Medicine Research Day}{}{}{}
+\cventry{2014}{Invited Lecturer}{``Treatment of Invasive Fungal Infections: State of the Art. Consensus Guidelines \& Recommendations ISHLT Fungal Expert Panel''}{International Society for Heart \& Lung Transplantation 34\txsp{th} Annual Meeting, San Diego, CA}{}{}{}
+\cventry{2013}{Invited Lecturer}{``The Role of Bacterial Infection \& Colonization on Chronic Allograft Dysfunction''}{International Society for Heart \& Lung Transplantation 33\txsp{rd} Annual Meeting}{Montr\'{e}al, Canada}{}{}{}
+
+\cventry{2011}{Clinical and Health Services Research Award, Junior Faculty}{Department of Medicine Research Day}{{\smaller UCLA} Department of Medicine}{Los Angeles, CA}{}
+
 \cventry{2009}{Visiting Professor}{Asahi General Hospital}{Asahi, Japan}{}{Teaching Medical residents Internal Medicine with an emphasis on Infectious Diseases.}
-\cventry{2005}{Burroughs Welcome Fund-Howard Hughes Medical Institute Course in Scientific Management}{{\smaller BWF-HHMI}}{}{}{}
-\cventry{2001}{Malaria Research Training Program}{Center for Vaccine Development, University of Maryland School of Medicine \& Fogarty International Center}{}{}{}
-\cventry{1997}{Alpha Omega Alpha, Letter of Distinction in Pediatrics \& Doctoring}{{\smaller UCLA} School of Medicine}{}{}{}
-\cventry{1996}{Marietta Voge Memorial Fund in Tropical Medicine}{{\smaller UCLA} School of Medicine}{}{}{}
-\cventry{1992}{Phi Beta Kappa, Honors in Biology, College Honors}{University of California, Santa Cruz}{}{}{}
+\cventry{2005}{Burroughs Welcome Fund-Howard Hughes Medical Institute Course in Scientific Management}{{\smaller BWF-HHMI}}{Bethesda, MD}{}{}
+\cventry{2001}{Malaria Research Training Program}{Center for Vaccine Development, University of Maryland School of Medicine \& Fogarty International Center}{Mali}{}{}
+
+\cventry{1997}{Alpha Omega Alpha, Letter of Distinction in Pediatrics \& Doctoring}{{\smaller UCLA} School of Medicine}{Los Angeles, CA}{}{}
+\cventry{1996}{Marietta Voge Memorial Fund in Tropical Medicine}{{\smaller UCLA} School of Medicine}{Colombia}{}{}
+\cventry{1992}{Phi Beta Kappa, Honors in Biology, College Honors}{University of California}{Santa Cruz, CA}{}{}
+
+
 
 \section{Research Grants and Fellowships Received}
 % \cvcomputer{R01 Investigator Initiated Award}{{\smaller PI} A Gregson, {\smaller NIH}/{\smaller NHLBI}} {Pending Review Feb 2016}{``Exosomes as Modulators of Acute Lung Allograft Rejection'' Demonstrate the ability of exosomes to both provoke an acute allograft rejection environment, and then reverse it.}
@@ -317,7 +357,7 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 
 \section{Lectures}
 
-\cventry{April / September 2018}{\emph{Malaria, Clinical Management}}{{\smaller UCLA} Global Medicine Core Lecture Series}{{\smaller UCLA} School of Medicine}{Los Angeles}{}
+\cventry{April \& September 2018}{\emph{Malaria, Clinical Management}}{{\smaller UCLA} Global Medicine Core Lecture Series}{{\smaller UCLA} School of Medicine}{Los Angeles}{}
 
 \cventry{April 2017}{\emph{Common Infections in Oncology Patients: Neutropenic Complications}}{{\smaller CME} Lecture Program}{Providence Saint Joseph Medical Center}{Burbank}{}
 
@@ -385,14 +425,14 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
  \bibitem[1]{} Sokolove PE, Lee BS, Krawczyk JA, Banos PT, \textbf{Gregson AL}, Boyce DM, Lewis RJ. Implementation of an Emergency Department Triage Procedure for the Detection and Isolation of Patients at High Risk for Having Pulmonary Tuberculosis. {\color{BrickRed}\textit{Annals of Emergency Medicine}} \textbf{2000} Apr; 35(4):327--336. \href{http://dx.doi.org/10.1016/S0196-0644(00)70050-3}{\nolinkurl{doi:10.1016/S0196-0644(00)70050-3}}~ 
    {\color{NavyBlue}\href{http://www.eigenfactor.org/detail.php?year=2006&jrlname=ANN%20EMERG%20MED&issnnum=0196-0644}{{\smaller EFn: 2.1 AI: 1.6}} 
        \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=ANN+EMERG+MED}{{\smaller JIF: 4.695}}~ 
-       \href{http://scholar.google.com/scholar?cites=10844131317441698410&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 24}}~
+       \href{http://scholar.google.com/scholar?cites=10844131317441698410&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 31}}~
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-0033900820&origin=inward&txGid=VWsBqLSNMzShrBOla5xyIwt%3a8}{{\smaller Scopus Cites: 14}}
        }
 
  \bibitem[2]{} \textbf{Gregson AL}, Plowe CV. Mechanisms of Resistance of Malaria Parasites to Antifolates. {\color{BrickRed}\textit{Pharmacological Reviews}} \textbf{2005} Mar; 57(1):118--145. \href{http://dx.doi.org/10.1124/pr.57.1.4}{\nolinkurl{doi:10.1124/pr.57.1.4}}~ 
      {\color{NavyBlue}\href{http://www.eigenfactor.org/detail.php?year=2006&jrlname=PHARMACOL%20REV&issnnum=0031-6997}{{\smaller EFn: 1.9 AI: 8.1}} 
          \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=PHARMACOL+REV}{{\smaller JIF: 17.099}}~ 
-         \href{http://scholar.google.com/scholar?cites=686331982961384450&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 298}}~
+         \href{http://scholar.google.com/scholar?cites=686331982961384450&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 430}}~
          \href{http://www.scopus.com/record/display.url?eid=2-s2.0-14144253009&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a33}{{\smaller Scopus Cites: 218}}
          }
 
@@ -403,41 +443,41 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 
  \bibitem[4]{} Thera MA, Doumbo OK, Coulibali D, \emph{et. al.} Safety and Immunogenicity of an AMA-1 Malaria Vaccine in Malian Adults: Results of a Phase I Randomized Trial. {\color{BrickRed}\textit{PLoS {\smaller ONE}}} \textbf{2008} Jan 23; 3(1):e1465. \href{http://dx.doi.org/10.1371/journal.pone.0001465}{\nolinkurl{doi:10.1371/journal.pone.0001465}} {\smaller PMC2186380}~
      {\color{NavyBlue} \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=6&journal=PLOS+ONE}{{\smaller EFn: 128 AI: 1.4 JIF: 3.234}}~ 
-     \href{http://scholar.google.com/scholar?cites=15540812245970669613&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 69}}~
+     \href{http://scholar.google.com/scholar?cites=15540812245970669613&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 89}}~
      \href{http://www.scopus.com/record/display.url?eid=2-s2.0-44849126049&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a31}{{\smaller Scopus Cites: 54}}
      }
 
  \bibitem[5]{} \textbf{Gregson AL}, Oliveira G, Othoro Watta C, Calvo-Calle JM, Thorton GB, Nardin E, Edelman R. Phase I trial of an alhydrogel adjuvanted hepatitis B core virus-like particle containing epitopes of \emph{Plasmodium falciparum} circumsporozoite protein. {\color{BrickRed}\textit{PLoS {\smaller ONE}}}  \textbf{2008} Feb 6; 3(2):e1556.  \href{http://www.plosone.org/doi/pone.0001556}{\nolinkurl{doi:10.1371/journal.pone.0001556}} {\smaller PMC2216688}~
      {\color{NavyBlue} \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=6&journal=PLOS+ONE}{{\smaller EFn: 128 AI: 1.4 JIF: 3.234}}~ 
        \href{http://apps.webofknowledge.com/CitedFullRecord.do?product=WOS&colName=WOS&SID=3BKgP7NlJAN3im2FBbd&search_mode=CitedFullRecord&isickref=WOS:000260535700027&cacheurlFromRightClick=no}{{\smaller ISI Cites: 18}}
-       \href{http://scholar.google.com/scholar?cites=3128529885204548330&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 33}}~
+       \href{http://scholar.google.com/scholar?cites=3128529885204548330&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 47}}~
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-45249093689&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a29}{{\smaller Scopus Cites: 24}}
      }
 
  \bibitem[6]{} \textbf{Gregson AL}, Hoji A, Saggar R, Ross DJ, Kubak BM, Jamieson BD, Weigt SS, Lynch III JP, Ardehali A, Belperio JA, Yang OO. Bronchoalveolar immunologic profile of acute human lung transplant allograft rejection. {\color{BrickRed}\textit{Transplantation}} \textbf{2008} Apr 15; 85(7):1056--1059. \href{http://dx.doi.org/10.1097/TP.0b013e318169bd85}{\nolinkurl{doi:10.1097/TP.0b013e318169bd85}} {\smaller PMC2744369}~
    {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=transplantation&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 4.3 AI: 1.2}}     \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=TRANSPLANTATION}{{\smaller JIF: 3.828}}~ 
-     \href{http://scholar.google.com/scholar?cites=11900788784532627097&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 36}}~
+     \href{http://scholar.google.com/scholar?cites=11900788784532627097&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 42}}~
      \href{http://www.scopus.com/record/display.url?eid=2-s2.0-42149110229&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a27}{{\smaller Scopus Cites: 32}}
      }
 
  \bibitem[7]{} Weigt SS, Elashoff RM, Keane MP, Strieter RM, Gomperts BN, Xue YY,  Ardehali A, \textbf{Gregson AL}, Kubak B, Fishbein MC, Saggar R, Ross DJ, Lynch III JP, Zisman DA, Belperio JA. Altered Levels of CC Chemokines during Pulmonary CMV Predict Mortality and Mortality Due to BOS Post-Lung Transplantation. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2008} July; 8(7):1512--1522. \href{http://dx.doi.org/10.1111/j.1600-6143.2008.02280.x}{\nolinkurl{doi:10.1111/j.1600-6143.2008.02280.x}} {\smaller PMC2760345}~
    {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0}} 
        \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
-       \href{http://scholar.google.com/scholar?cites=12767584017196486186&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 41}}~
+       \href{http://scholar.google.com/scholar?cites=12767584017196486186&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 57}}~
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-47249111662&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a25}{{\smaller Scopus Cites: 31}}
        }
 
  \bibitem[8]{} Saggar R, Ross DJ, Saggar R, Zisman DA, \textbf{Gregson A}, Lynch JP, Keane MP, Weigt SS, Ardehali A, Kubak B, Lai C, Elashoff D, Fishbein MC, Wallace WD,  Belperio JA.  Pulmonary Hypertension Associated With Lung Transplantation Obliterative Bronchiolitis Is Due To Vascular Remodeling of the Allograft. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2008} July; 8(9):1921--1930. \href{http://dx.doi.org/10.1111/j.1600-6143.2008.02338.x}{\nolinkurl{doi:10.1111/j.1600-6143.2008.02338.x}} {\smaller PMC4207285}~  
    {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0}} 
        \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
-       \href{http://scholar.google.com/scholar?cites=5026516916977893041&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 19}}~
+       \href{http://scholar.google.com/scholar?cites=5026516916977893041&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 28}}~
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-49649092875&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a23}{{\smaller Scopus Cites: 14}}
        }
 
  \bibitem[9]{} Kubak BM, \textbf{Gregson AL}, Pegues DA, Leibowitz MR, Carlson M, Marelli D, Patel J, Laks H, Kobashigawa JA. Use of Hearts Transplanted From Donors With Severe Sepsis and Infectious Deaths. {\color{BrickRed}\textit{Journal of Heart and Lung Transplantation}} \textbf{2009} March; 28(3):260--265. \href{http://dx.doi.org/10.1016/j.healun.2008.11.911}{\nolinkurl{doi:10.1016/j.healun.2008.11.911}}~
     {\color{NavyBlue} \href{http://www.eigenfactor.org/rankings.php?search=JOURNAL+OF+HEART+AND+LUNG+TRANSPLANTATION&search2=&search3=&searchby=journal}{{\smaller EFn: 2.5 AI: 1.4}}
        \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=J+HEART+LUNG+TRANSPL}{{\smaller JIF: 6.650}}~
-     \href{http://scholar.google.com/scholar?cites=7343380594284811327&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 16}}~
+     \href{http://scholar.google.com/scholar?cites=7343380594284811327&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 27}}~
      \href{http://www.scopus.com/record/display.url?eid=2-s2.0-61749102272&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a21}{{\smaller Scopus Cites: 10}}
      }
 
@@ -448,7 +488,7 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
  \bibitem[11]{} Weigt SS, Elashoff RM, Huang C, Ardehali A, \textbf{Gregson AL}, Kubak B, Fishbein MC, Saggar R, Keane MP, Saggar R,  Lynch JP, Zisman DA, Ross DJ, Belperio JA. Aspergillus Colonization of the Lung Allograft is a Risk Factor for Bronchiolitis Obliterans Syndrome. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2009} May; 9(8):1903 - 1911. \href{http://dx.doi.org/10.1111/j.1600-6143.2009.02635.x}{\nolinkurl{doi: 10.1111/j.1600-6143.2009.02635.x}} {\smaller PMC4214373}~ 
            {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0}} 
        \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
-       \href{http://scholar.google.com/scholar?cites=2622793820022300316&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 98}}~
+       \href{http://scholar.google.com/scholar?cites=2622793820022300316&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 152}}~
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-67650954171&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a18}{{\smaller Scopus Cites: 63}}
        }
 
@@ -462,45 +502,48 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
  \bibitem[13]{} Wang TF, Wang T, Altman R, Eshaghian P, Lynch JP, Ross DJ, Belperio JA, Weigt SS, Saggar R, \textbf{Gregson A}, Kubak B, Saggar R. Periostitis Secondary to Prolonged Voriconazole Therapy in Lung Transplant Recipients. {\color{BrickRed}\textit{American Journal of Transplantation}}. \textbf{2009} Oct 21; 9(12):2845--2850. \href{http://dx.doi.org/10.1111/j.1600-6143.2009.02837.x}{\nolinkurl{doi: 10.1111/j.1600-6143.2009.02837.x}}~ 
            {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0}} 
        \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
-       \href{http://scholar.google.com/scholar?cites=9352467524761589821&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 39}}~
+       \href{http://scholar.google.com/scholar?cites=9352467524761589821&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 62}}~
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-72449144605&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a16}{{\smaller Scopus Cites: 29}}
        }
 
   \bibitem[14]{} Saggar R, Khanna D, Furst DE, Belperio JA, Park GS, Weigt SS, Kubak B, Ardehali A, Derhovanessian A, Clements PJ, Shapiro S, Hunter C, \textbf{Gregson A}, Fishbein MC, Lynch JP, Ross DJ, Saggar R. Systemic Sclerosis and Bilateral Lung Transplantation: A Single Center Experience. {\color{BrickRed}\textit{European Respiratory Journal}}. \textbf{2010} Mar 29; 36(4):893--900. \href{http://dx.doi.org/10.1183/09031936.00139809}{\nolinkurl{doi: 10.1183/09031936.00139809}} {\smaller PMC2921556}~ 
     {\color{NavyBlue}\href{http://www.eigenfactor.org/detail.php?year=2008&jrlname=EUR%20RESPIR%20J&issnnum=0903-1936}{{\smaller EFn: 6.2 AI: 2.1}} 
         \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=EUR+RESPIR+J}{{\smaller JIF: 7.636}}~
-        \href{http://scholar.google.com/scholar?cites=9510861874112920695&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 62}}~
+        \href{http://scholar.google.com/scholar?cites=9510861874112920695&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 98}}~
         \href{http://www.scopus.com/record/display.url?eid=2-s2.0-77957848190&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a14}{{\smaller Scopus Cites: 43}}
         }
 
   \bibitem[15]{} Beavogui A, Djimd\'{e} AA, \textbf{Gregson AL}, Dao A, Maiga H, Fofana B, Coulibaly B, Tekete M, Sacko A, Ouologuem D, Niare O, Kone A, Toure AM, Plowe CV, Doumbo OK. Low Infectivity of Post-Sulfadoxine-Pyrimethamine \textit{Plasmodium falciparum} Gametocytes to \textit{Anopheles gambiae} in Mali. {\color{BrickRed}\textit{International Journal for Parasitology}} \textbf{2010} May 8; 40(10):1213--1220. \href{http://dx.doi.org/10.1016/j.ijpara.2010.04.010}{\nolinkurl{doi: 10.1016/j.ijpara.2010.04.010}} {\smaller PMC3571761}~ 
       {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?search=INTERNATIONAL+JOURNAL+FOR+PARASITOLOGY&search2=&search3=&searchby=journal}{{\smaller EFn: 1.7 AI: 1.2}}
          \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=INT+J+PARASITOL}{{\smaller JIF: 3.872}}~
-         \href{http://scholar.google.com/scholar?cites=13371683552743464380&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 18}}~
+         \href{http://scholar.google.com/scholar?cites=13371683552743464380&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 27}}~
          \href{http://www.scopus.com/record/display.url?eid=2-s2.0-77954028849&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a12}{{\smaller Scopus Cites: 16}}
          }
 
   \bibitem[16]{} \textbf{Gregson AL}, Hoji A, Palchevskiy V, Hu S, Weigt SS, Liao E, Derhovanessian A, Saggar R, Song S, Elashoff R, Yang OO, Belperio JA. Protection Against Bronchiolitis Obliterans Syndrome is Associated with Allograft {\smaller CCR}7\txsp{+}{\smaller CD}45RA\txsp{-} T Regulatory Cells. {\color{BrickRed}\textit{PLoS {\smaller ONE}}} \textbf{2010} Jun 29; 5(6):e11354. \href{http://dx.plos.org/10.1371/journal.pone.0011354}{\nolinkurl{10.1371/journal.pone.0011354}} {\smaller PMC2894051}~ 
      {\color{NavyBlue} \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=6&journal=PLOS+ONE}{{\smaller EFn: 128 AI: 1.4 JIF: 3.234}}~ 
-      \href{http://scholar.google.com/scholar?cites=17706160008567303104&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 16}}~
+      \href{http://scholar.google.com/scholar?cites=17706160008567303104&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 27}}~
       \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-77955316535&origin=resultslist&sort=plf-f&src=s&nlo=1&nlr=20&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a3832&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=14&citeCnt=14&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 14}}
       }
 
   \bibitem[17]{} Zaghi D, Panosian C, Gutierrez M, \textbf{Gregson A}, Taylor E, Ochoa MT. New World Cutaneous Leishmaniasis: Current Challenges in Diagnoses and Parenteral Therapy. {\color{BrickRed}\textit{Journal of the American Academy of Dermatology}} \textbf{2011} Mar; 64(3):587--592. \href{http://dx.doi.org/10.1016/j.jaad.2009.08.045}{\nolinkurl{10.1016/j.jaad.2009.08.045}}~ 
     {\color{NavyBlue} \href{http://www.eigenfactor.org/detail.php?year=2008&jrlname=J%20AM%20ACAD%20DERMATOL&issnnum=0190-9622}{{\smaller EFn: 3.3 AI: 1.4}} 
         \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=J+AM+ACAD+DERMATOL}{{\smaller JIF: 4.449}}~ 
+        \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4429934093446128267}{{\smaller Google Scholar Cites: 15}}
         \href{http://www.scopus.com/record/display.url?eid=2-s2.0-79951580535&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a8}{{\smaller Scopus Cites: 5}}
         } 
 
   \bibitem[18]{} Huang HC, Weigt SS, Derhovanessian A, \textit{et.\ al.}. Non-Tuberculous Mycobacterium Infection after Lung Transplantation is Associated with Increased Mortality. {\color{BrickRed}\textit{Journal of Heart and Lung Transplantation}} \textbf{2011} Jul; 30(7):790--8. \href{http://dx.doi.org/10.1016/j.healun.2011.02.007}{\nolinkurl{10.1016/j.healun.2011.02.007}} {\smaller PMC3942162}~ 
     {\color{NavyBlue} \href{http://www.eigenfactor.org/rankings.php?search=JOURNAL+OF+HEART+AND+LUNG+TRANSPLANTATION&search2=&search3=&searchby=journal}{{\smaller EFn: 2.5 AI: 1.4}}
-       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=J+HEART+LUNG+TRANSPL}{{\smaller JIF: 6.650}}~
+      \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=J+HEART+LUNG+TRANSPL}{{\smaller JIF: 6.650}}~
+      \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9233036861114044918}{{\smaller Google Scholar Cites: 52}}
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-79959232329&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a6}{{\smaller Scopus Cites: 16}}
     }
 
   \bibitem[19]{} Weigt SS, Derhovanessian A, Liao E, Hu S, \textbf{Gregson AL}, Kubak BM, Saggar R, Saggar R, Plachevskiy V, Fishbein MC, Lynch JP, Ardehali A, Ross DJ, Elashoff RM, Belperio JA. {\smaller CXCR}3 Chemokine Ligands during Respiratory Viral Infections Predict Progressive Lung Allograft Dysfunction. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2012} Feb; 12(2):477--484. \href{http://dx.doi.org/10.1111/j.1600-6143.2011.03859.x}{\nolinkurl{10.1111/j.1600-6143.2011.03859.x}} {\smaller PMC3833088}~
            {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0}} 
-       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
+             \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
+             \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3801165577084038713}{{\smaller Google Scholar Cites: 36}}
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-84856469808&origin=inward&txGid=2728424DD3A06399B3857C04F09A7B4B.N5T5nM1aaTEF8rE6yKCR3A%3a2}{{\smaller Scopus Cites: 11}}
        }
 
@@ -514,6 +557,7 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
   \bibitem[21]{} \textbf{Gregson AL}, Wang X, Weigt SS, Elashoff R, Lynch JP III, Ross DJ, Kubak BM, Saggar R, Ardehali A, Li G, Belperio J. Interaction Between Pseudomonas and CXC Chemokines Increases Risk of {\smaller BOS} and Death in Lung Transplantation {\color{BrickRed}\textit{American Journal of Respiratory and Critical Care Medicine}} \textbf{2013} Mar; 187(5):518--526. \href{http://dx.doi.org/10.1164/rccm.201207-1228OC}{\nolinkurl{10.1164/rccm.201207-1228OC}} {\smaller PMC3733405}~
     {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?bsearch=AMERICAN+JOURNAL+OF+RESPIRATORY+AND+CRITICAL+CARE+MEDICINE&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 10.5  AI: 3.9}}
       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+RESP+CRIT+CARE}{{\smaller JIF: 12.996}}
+      \href{}{{\smaller Google Scholar Cites: 44}}
       \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84875164229&origin=resultslist&sort=plf-f&src=s&st1=&st2=&nlo=1&nlr=20&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a2832&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=7&citeCnt=5&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 5}}
     }
 
@@ -521,6 +565,7 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
   \bibitem[22]{} Weigt SS, Copeland CAF, Derhovanessian A, Shino MY, Davis WA, Snyder LD, \textbf{Gregson AL}, Saggar R, Lynch JP III, Ross DJ, Ardehali A, Elashoff RM, Palmer SM, Belperio JA. Colonization with Small Conidia Aspergillus Species Is Associated with Bronchiolitis Obliterans Syndrome: A Two-Center Validation Study. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2013} Apr; 13(4):919--927. \href{http://dx.doi.org/10.1111/ajt.12131}{\nolinkurl{10.1111/ajt.12131}} {\smaller PMC3618528}~
            {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0}} 
        \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
+       \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9656768912907863459}{{\smaller Google Scholar Cites: 55}}
        \href{http://www.scopus.com/record/display.url?eid=2-s2.0-84875713808&origin=resultslist&sort=plf-f&src=s&st1=gregson&st2=A&nlo=1&nlr=20&nls=count-f&sid=AFE4F9BA8F397BEA10A9EE5867F44C46.ZmAySxCHIBxxTXbnsoe5w%3a133&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=1&relpos=1&citeCnt=4&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 10}}
        }
 
@@ -528,12 +573,14 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
   \bibitem[23]{} Shino MY, Weigt SS, Li N, Palchevskiy V, Derhovanessian A, Saggar R, Sayah DM, \textbf{Gregson AL}, Fishbein MC, Ardehali A, Ross DJ, Lynch JP 3rd, Elashoff RM, Belperio JA. CXCR3 Ligands Are Associated with the Continuum of Diffuse Alveolar Damage to Chronic Lung Allograft Dysfunction. {\color{BrickRed}\textit{American Journal of Respiratory and Critical Care Medicine}} \textbf{2013} Nov; 9(1):1117--1125. \href{http://dx.doi.org/10.1164/rccm.201305-0861OC}{\nolinkurl{10.1164/rccm.201305-0861OC}} {\smaller PMC3863740}~
     {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?bsearch=AMERICAN+JOURNAL+OF+RESPIRATORY+AND+CRITICAL+CARE+MEDICINE&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 10.5 AI: 3.9}}
       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+RESP+CRIT+CARE}{{\smaller JIF: 12.996}}
+      \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2055512562952965014}{{\smaller Google Scholar Cites: 29}}
       \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84887305121&origin=resultslist&sort=plf-f&src=s&st1=gregson%2c+a&nlo=&nlr=&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a1990&sot=b&sdt=cl&cluster=scosubtype%2c%22ar%22%2ct%2bscoauthid%2c%226603096521%22%2ct&sl=23&s=AUTHOR-NAME%28gregson%2c+a%29&relpos=2&citeCnt=6&searchTerm=AUTHOR-NAME%28gregson%2C+a%29+AND+%28+LIMIT-TO%28DOCTYPE%2C%5C%26quot%3Bar%5C%26quot%3B+%29+%29++AND+%28+LIMIT-TO%28AU-ID%2C%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29+%29+}{{\smaller Scopus Cites: 6}}
     }
 
   \bibitem[24]{} Injean P, Hsiue PP, Vangala S, Miller LG, Benharash P, Brindis RG, McKinnell JA, \textbf{Gregson AL}. Survey of Pre-Operative Infection Prevention for {\smaller CABG} Procedures. {\color{BrickRed}\textit{Infection Control \& Hospital Epidemiology}} \textbf{2014} Jun; 35(6):736-737. \href{http://www.jstor.org/stable/10.1086/676435}{\nolinkurl{10.1086/676435}} {\smaller PMC4169282}~
     {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?bsearch=infection+control+and+hospital+epidemiology&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 2.7 AI: 1.5}}
-          \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=INFECT+CONT+HOSP+EP}{{\smaller JIF: 4.175}}
+      \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=INFECT+CONT+HOSP+EP}{{\smaller JIF: 4.175}}
+      \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9666265908143532134}{{\smaller Google Scholar Cites: 4}}
           \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84899825837&origin=resultslist&sort=plf-f&src=s&st1=&st2=&nlo=1&nlr=20&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a2832&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=2&citeCnt=2&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 2}}
           }
 
@@ -545,42 +592,51 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 
   \bibitem[26]{} \textbf{Gregson AL}, Wang X, Injean P, Weigt S, Shino M, Sayah D, DerHovanessian A, Lynch JP, Ross DJ, Saggar R, Ardehali A, Li G, Elashoff R, Belperio JA. Staphylococcus via an Interaction with the {\smaller ELR}\txsp{+} {\smaller CXC} Chemokine {\smaller ENA}-78 is Associated with {\smaller BOS}. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2015} Mar; 15(3):792--799. \href{http://onlinelibrary.wiley.com/doi/10.1111/ajt.13029/abstract}{\nolinkurl{10.1111/ajt.13029}} {\smaller PMC4336208}~
     {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0 JIF: 5.683}} 
-            \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84924018148&origin=resultslist&sort=plf-f&src=s&st1=gregson%2c+a&nlo=&nlr=&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a1990&sot=b&sdt=cl&cluster=scosubtype%2c%22ar%22%2ct%2bscoauthid%2c%226603096521%22%2ct&sl=23&s=AUTHOR-NAME%28gregson%2c+a%29&relpos=1&citeCnt=1&searchTerm=AUTHOR-NAME%28gregson%2C+a%29+AND+%28+LIMIT-TO%28DOCTYPE%2C%5C%26quot%3Bar%5C%26quot%3B+%29+%29++AND+%28+LIMIT-TO%28AU-ID%2C%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29+%29+}{{\smaller Scopus Cites: 1}}
+       \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2317703189010929866}{{\smaller Google Scholar Cites: 10}}
+     \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84924018148&origin=resultslist&sort=plf-f&src=s&st1=gregson%2c+a&nlo=&nlr=&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a1990&sot=b&sdt=cl&cluster=scosubtype%2c%22ar%22%2ct%2bscoauthid%2c%226603096521%22%2ct&sl=23&s=AUTHOR-NAME%28gregson%2c+a%29&relpos=1&citeCnt=1&searchTerm=AUTHOR-NAME%28gregson%2C+a%29+AND+%28+LIMIT-TO%28DOCTYPE%2C%5C%26quot%3Bar%5C%26quot%3B+%29+%29++AND+%28+LIMIT-TO%28AU-ID%2C%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29+%29+}{{\smaller Scopus Cites: 1}}
        }
 
   \bibitem[27]{} Humphries R, Yang S, Hemarajata P, Ward K, Hindler J, Miller SC, \textbf{Gregson A}. First Report of Ceftazidime-Avibactam Resistance in a KPC-3 Expressing Klebsiella pneumoniae. {\color{BrickRed}\textit{Antimicrobial Agents and Chemotherapy}} \textbf{2015} Oct; 59(10):6605-6607. \href{http://aac.asm.org/content/early/2015/07/14/AAC.01165-15.long}{\nolinkurl{10.1128/AAC.01165-15}}
     {\color{NavyBlue}\href{http://www.eigenfactor.org/projects/journalRank/rankings.php?bsearch=ANTIMICROBIAL+AGENTS+AND+CHEMOTHERAPY&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 10.4 AI: 1.4  JIF: 4.476}}
+      \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4605070622342235886&as_sdt=5}{{\smaller Google Scholar Cites: 88}}
       \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84942903035&origin=resultslist&sort=plf-f&src=s&st1=gregson%2c+a&nlo=&nlr=&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a1990&sot=b&sdt=cl&cluster=scosubtype%2c%22ar%22%2ct%2bscoauthid%2c%226603096521%22%2ct&sl=23&s=AUTHOR-NAME%28gregson%2c+a%29&relpos=0&citeCnt=1&searchTerm=AUTHOR-NAME%28gregson%2C+a%29+AND+%28+LIMIT-TO%28DOCTYPE%2C%5C%26quot%3Bar%5C%26quot%3B+%29+%29++AND+%28+LIMIT-TO%28AU-ID%2C%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29+%29+}{{\smaller Scopus Cites: 1}}
         }
 
   \bibitem[28]{} \textbf{Gregson AL}, Hoji A, Injean P, Poynter ST, Briones C, Palchevskiy V, Weigt SS, Shino M, Derhovanessian A, Sayah D, Saggar R, Ross D, Ardehali A, Lynch III JP, Belperio JA. Altered Exosomal RNA Profiles in Bronchoalveolar Lavage from Lung Transplants with Acute Rejection. {\color{BrickRed}\textit{American Journal of Respiratory and Critical Care Medicine}} \textbf{2015} Dec; 192(12):1490--1503. \href{http://www.atsjournals.org/doi/abs/10.1164/rccm.201503-0558OC#.VeDm8JWW25M}{\nolinkurl{10.1164/rccm.201503-0558OC}}~ 
     {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?bsearch=AMERICAN+JOURNAL+OF+RESPIRATORY+AND+CRITICAL+CARE+MEDICINE&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 10.5 AI: 3.9}}
       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+RESP+CRIT+CARE}{{\smaller JIF: 12.996}}
+      \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8009839804536388683}{{\smaller Google Scholar Cites: 18}}
       \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84951933250&origin=resultslist&sort=plf-f&src=s&st1=gregson+&st2=&sid=A253098209782A207E8DEF555629A3D6.iqs8TDG0Wy6BURhzD3nFA%3a90&sot=b&sdt=b&sl=19&s=FIRSTAUTH%28gregson+%29&relpos=0&citeCnt=1&searchTerm=FIRSTAUTH%28gregson+%29}{{\smaller Scopus Cites: 1}}
     }~ 
     \\(See accompanying Editorial by Lama VN. Peering into a Rejecting Lung: Can Bronchoalveolar Lavage Exosomes Provide Novel Insights? {\color{BrickRed}\textit{American Journal of Respiratory and Critical Care Medicine}} \textbf{2015} Dec; 192(12):1413--1414. \href{http://www.atsjournals.org/doi/abs/10.1164/rccm.201509-1799ED}{\nolinkurl{10.1164/rccm.201509-1799ED}})
 
   \bibitem[29]{} DerHovanessian A, Weigt SS, Palchevskiy V, Shino MY, Sayah DM, \textbf{Gregson AL}, Noble PW, Palmer SM, Fishbein MC, Kubak BM, Ardehali A, Ross DJ, Saggar R, Lynch JP, Elashoff RM, Belperio JA. The Role of {\smaller TGF}-$\beta$ in the Association Between Primary Graft Dysfunction and Bronchiolitis Obliterans Syndrome. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2016} Feb; 16(2):640--649. \href{http://onlinelibrary.wiley.com/doi/10.1111/ajt.13475/abstract}{\nolinkurl{10.1111/ajt.13475}}~
-       {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0 JIF: 5.683}} 
+    {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0 JIF: 5.683}}
+      \href{}{{\smaller Google Scholar Cites: 16}}
        }
 
   \bibitem[30]{} Sole A, Alexander B, Aslam S, Avery R, Benden C, Billaud E, Chambers D, Danziger-Isakov L, Fedson S, Gould K, \textbf{Gregson A}, Grossi P, Hadjiliadis D, Hopkins P, Luong ML, Marriott D, Monforte V, Mu\~{n}oz P, Pasqualotto A, Roman A, Silveira F, Teuteberg J, Weigt S, Zaas A, Zuckerman A, Morrissey O. The 2015 International Society for Heart and Lung Transplantation Guidelines for the Management of Fungal Infections in Mechanical Circulatory Support and Cardiothoracic Organ Transplant Recipients: Executive Summary.  {\color{BrickRed}\textit{Journal of Heart and Lung Transplantation}} \textbf{2016} Mar; 35(3):261--282. \href{http://www.sciencedirect.com/science/article/pii/S1053249816000541}{\nolinkurl{10.1016/j.healun.2016.01.007}}
     {\color{NavyBlue} \href{http://www.eigenfactor.org/rankings.php?search=JOURNAL+OF+HEART+AND+LUNG+TRANSPLANTATION&search2=&search3=&searchby=journal}{{\smaller EFn: 2.5 AI: 1.4}}
+     \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=406115809586476358}{{\smaller Google Scholar Cites: 38}}
     }
 
-  \bibitem[31]{} DerHovanessian A, Todd JL, Zhang A, Li N, Mayalall A, Finlen Copeland CA, Shino M, Pavlisko EN, Wallace WD, \textbf{Gregson A}, Ross DJ, Saggar R, Lynch JP 3rd, Belperio J, Snyder LD, Palmer SM, Weigt SS. Validation and Refinement of Chronic Lung Allograft Dysfunction Phenotypes in Bilateral and Single Lung Recipients. {\color{BrickRed}\textit{Annals of the American Thoracic Society}} \textbf{2016} May; 13(5):627-35. \href{http://www.atsjournals.org/doi/10.1513/AnnalsATS.201510-719OC#.V3wodPEjW5M}{\nolinkurl{10.1513/AnnalsATS.201510-719OC}} 
+  \bibitem[31]{} DerHovanessian A, Todd JL, Zhang A, Li N, Mayalall A, Finlen Copeland CA, Shino M, Pavlisko EN, Wallace WD, \textbf{Gregson A}, Ross DJ, Saggar R, Lynch JP 3rd, Belperio J, Snyder LD, Palmer SM, Weigt SS. Validation and Refinement of Chronic Lung Allograft Dysfunction Phenotypes in Bilateral and Single Lung Recipients. {\color{BrickRed}\textit{Annals of the American Thoracic Society}} \textbf{2016} May; 13(5):627-35. \href{http://www.atsjournals.org/doi/10.1513/AnnalsATS.201510-719OC#.V3wodPEjW5M}{\nolinkurl{10.1513/AnnalsATS.201510-719OC}}
+    \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1415995398663718578}{{\smaller Google Scholar Cites: 14}}
 
 \bibitem[32]{} Miele CH, Schwab K, Saggar R, Duffy E, Elashoff D, Tseng CH, Weigt S, Charan D, Abtin F, Johannes J, Derhovanessian A, Conklin J, Ghassemi K, Khanna D, Siddiqui O, Ardehali A, Hunter C, Kwon M, Biniwale R, Lo M, Volkmann E, Torres Barba D, Belperio JA, Sayah D, Mahrer T, Furst DE, Kafaja S, Clements P, Shino M, \textbf{Gregson A}, Kubak B, Lynch JP 3rd, Ross D, Saggar R. Lung Transplant Outcomes in Systemic Sclerosis with Significant Esophageal Dysfunction. A Comprehensive Single-Center Experience. {\color{BrickRed}\textit{Annals of the American Thoracic Society}} \textbf{2016} Jun; 13(6):793--802. \href{http://www.atsjournals.org/doi/10.1513/AnnalsATS.201512-806OC#.V3wkRvEjW5M}{\nolinkurl{10.1513/AnnalsATS.201512-806OC}}
 
   \bibitem[33]{} Allyn RR, Duffy EL, Humphries RH, Injean P, Weigt SS, Saggar R, Shino MY, Lynch III JP, Ardehali A, Belperio JA, Tseng CH, Kubak B, MD, Ross DJ, \textbf{Gregson AL}. Graft Death and CLAD Onset is Hastened by Viral Pneumonia After Lung Transplantation. {\color{BrickRed}\textit{Transplantation}} \textbf{2016} Nov; 100(11):2424--2431. \href{http://ovidsp.tx.ovid.com/sp-3.20.0b/ovidweb.cgi?WebLinkFrameset=1&S=MPIKFPIHKADDNFMANCIKCCFBPPEGAA00&returnUrl=ovidweb.cgi%3fMain%2bSearch%2bPage%3d1%26S%3dMPIKFPIHKADDNFMANCIKCCFBPPEGAA00&directlink=http%3a%2f%2fovidsp.tx.ovid.com%2fovftpdfs%2fFPDDNCFBCCMAKA00%2ffs046%2fovft%2flive%2fgv025%2f00007890%2f00007890-900000000-97328.pdf&filename=Graft+Loss+and+Clad+Onset+is+Hastened+by+Viral+Pneumonia+After+Lung+Transplantation.&navigation_links=NavLinks.S.sh.22.1&link_from=S.sh.22%7c1&pdf_key=FPDDNCFBCCMAKA00&pdf_index=/fs046/ovft/live/gv025/00007890/00007890-900000000-97328&D=ovft&link_set=S.sh.22|1|sl_10|resultSet|S.sh.22.23|0}{\nolinkurl{10.1097/TP.0000000000001346}}
-   {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=transplantation&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 4.3 AI: 1.2}}     \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=TRANSPLANTATION}{{\smaller JIF: 3.69}}~ 
+      {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=transplantation&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 4.3 AI: 1.2}}     \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=TRANSPLANTATION}{{\smaller JIF: 3.69}}~
+        \href{}{{\smaller Google Scholar Cites: 17}}
      }
   \\(See accompanying Editorial by Snyder LD. It is Not the Flicker but the Fire: Severity Matters in Viral infections After Lung Transplant. {\color{BrickRed}\textit{Transplantation}} \textbf{2016} Nov; 100(11):2248. \href{http://journals.lww.com/transplantjournal/Citation/onlinefirst/It_Is_Not_the_Flicker_but_the_Fire___Severity.97350.aspx}{\nolinkurl{10.1097/TP.0000000000001347}})
 
 \bibitem[34]{} Weigt SS, Wang X, Palchevskiy V, \textbf{Gregson AL}, Patel N, Derhovanessian A, Shino MY, Sayah DM, Birjandi S, Lynch III JP, Saggar R, Ardehali A, Ross DJ, Palmer SM, Elashoff D, Belperio JA. Gene Expression Profiling of Bronchoalveolar Lavage Cells Preceding a Clinical Diagnosis of Chronic Lung Allograft Dysfunction. {\color{BrickRed}\textit{PLoS ONE}} \textbf{2017} Jan; 12(1):e0169894. \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0169894}{\nolinkurl{10.1371/journal.pone.0169894}}
-     {\color{NavyBlue} \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=6&journal=PLOS+ONE}{{\smaller EFn: 128 AI: 1.4 JIF: 3.234}}}
+  {\color{NavyBlue} \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=6&journal=PLOS+ONE}{{\smaller EFn: 128 AI: 1.4 JIF: 3.234}}}
+  \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15184190617362938115}{{\smaller Google Scholar Cites: 6}}
 
-     \bibitem[35]{} Injean P, Eells SJ, Wu H, McElroy I, \textbf{Gregson AL}, McKinnell JA. Systematic Review and Meta-Analysis of the Data Behind Current Recommendations for Corticosteroids for Non-HIV Related PCP; Knowing When You Are on Shaky Foundations. {\color{BrickRed}\textit{Transplantation Direct}} \textbf{2017} Mar; 3(3):e137. \href{http://journals.lww.com/transplantationdirect/fulltext/2017/03000/A_Systematic_Review_and_Meta_Analysis_of_the_Data.11.aspx}{\nolinkurl{10.1097/TXD.0000000000000642}}
+   \bibitem[35]{} Injean P, Eells SJ, Wu H, McElroy I, \textbf{Gregson AL}, McKinnell JA. Systematic Review and Meta-Analysis of the Data Behind Current Recommendations for Corticosteroids for Non-HIV Related PCP; Knowing When You Are on Shaky Foundations. {\color{BrickRed}\textit{Transplantation Direct}} \textbf{2017} Mar; 3(3):e137. \href{http://journals.lww.com/transplantationdirect/fulltext/2017/03000/A_Systematic_Review_and_Meta_Analysis_of_the_Data.11.aspx}{\nolinkurl{10.1097/TXD.0000000000000642}}
+     \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13308587600576376748}{{\smaller Google Scholar Cites: 5}}
 
 
 \bibitem[36]{} Shino MY, Weigt SS, Li N, Derhovanessian A, Sayah DM, Huynh RH, Saggar R, \textbf{Gregson AL}, Ardehali A, Ross DJ, Lynch III JP, Elashoff RM, Belperio JA. Impact of Allograft Injury Time-of-Onset on the Development of Chronic Lung Allograft Dysfunction after Lung Transplantation. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2016} May; 17(5):1294--1303. \href{http://onlinelibrary.wiley.com/doi/10.1111/ajt.14066/abstract}{\nolinkurl{10.1111/ajt.14066}}~
@@ -589,22 +645,26 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 
    \bibitem[37]{} Shino MY, Weigt SS, Li N, Palchevskiy V, Derhovanessian A, Saggar R, Sayah DM, Huynh RH, \textbf{Gregson AL}, Fishbein MC, Ardehali A, Ross DJ, Lynch III JP, Elashoff RM, Belperio JA. The prognostic importance of CXCR3 chemokine during organizing pneumonia on the risk of chronic lung allograft dysfunction after lung transplantation. {\color{BrickRed}\textit{PLoSONE}} \textbf{2017} Jul; 12(7):e0180281. \href{https://doi.org/10.1371/journal.pone.0180281}{\nolinkurl{10.1371/journal.pone.0180281}}
 
-  \bibitem[38]{} Gaut D, Cone B, \textbf{Gregson AL}, Agopian VG. A Case of Gastrointestinal Mucormycosis following Orthotopic Liver Transplantation Presenting as a Femoral Nerve Palsy. {\color{BrickRed}\textit{Transplantation Proceedings}} \textbf{2017} Jul (online). \href{http://dx.doi.org/10.1016/j.transproceed.2017.03.074}{\nolinkurl{10.1016/j.transproceed.2017.03.074}}
+  \bibitem[38]{} Gaut D, Cone B, \textbf{Gregson AL}, Agopian VG. A Case of Gastrointestinal Mucormycosis following Orthotopic Liver Transplantation Presenting as a Femoral Nerve Palsy. {\color{BrickRed}\textit{Transplantation Proceedings}} \textbf{2017} Sep; 49(7):1608--1614. \href{http://dx.doi.org/10.1016/j.transproceed.2017.03.074}{\nolinkurl{10.1016/j.transproceed.2017.03.074}}
+
+  \bibitem[38]{} Hemarajata P, Amick T, Yang S, \textbf{Gregson AL}, Holzmeyer C, Bush K, Humphries RM. Selection of Hyperproduction of SME-1 and AmpC in a Carbapenem-Resistant \textit{Serratia marcescens} During Antibiotic Therapy. {\color{BrickRed}\textit{Journal of Antimicrobial Therapy}} \textbf{2018} May; 73(5):1256--1262. \href{https://doi.org/10.1093/jac/dky028}{\nolinkurl{10.1093/jac/dky028}}.
+    \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12694396114418958483}{{\smaller Google Scholar Cites: 1}}
+
+  \bibitem[39]{} Linfield RY, Campeau S, Injean P, \textbf{Gregson A}, Kaldas F, Rubin Z, Kim T, Kunz D, Chan A, Lee DJ, Humphries RM, McKinnell JA. Practical methods for effective vancomycin-resistant enterococci (VRE) surveillance: experience in a liver transplant surgical intensive care unit. {\color{BrickRed}\textit{Infection Control \& Hospial Epidemiology}} \textbf{2018} Oct; 39(10):1178--1182. \href{https://doi.org/10.1017/ice.2018.178}{\nolinkurl{10.1017/ice.2018.178}}
+
+ \bibitem[40]{} Shino MY, Weigt SS, Derhovanessian A, Sayah DM, Saggar R, Hyunh RH, \textbf{Gregson AL}, Ardehali A, Ross DJ, Lynch III JP, Elashoff RM, Belperio JA. The Prognostic Importance of Bronchoalveolar Lavage Fluid CXCL9 During Minimal Acute Rejection on the Risk of Chronic Lung Allograft Dysfunction. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2018} (online). \href{https://doi.org/10.1111/ajt.14397}{\nolinkurl{10.1111/ajt.14397}}
 
 \end{thebibliography}
 
- \vspace{0.2cm}
- \renewcommand{\refname}{Publications---Research Papers---Peer Reviewed ({\smaller in press})}
-% % % % % %% \nocite{*}
-% % % % % %% \bibliographystyle{plain}
-% % % % % %% \bibliography{gregsonpapers} 
- \begin{thebibliography}{1}
-
- \bibitem[1]{} Shino MY, Weigt SS, Derhovanessian A, Sayah DM, Saggar R, Hyunh RH, \textbf{Gregson AL}, Ardehali A, Ross DJ, Lynch III JP, Elashoff RM, Belperio JA. The Prognostic Importance of Bronchoalveolar Lavage Fluid CXCL9 During Minimal Acute Rejection on the Risk of Chronic Lung Allograft Dysfunction. {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2017} Jun.
+%  \vspace{0.2cm}
+%  \renewcommand{\refname}{Publications---Research Papers---Peer Reviewed ({\smaller in press})}
+% % % % % % %% \nocite{*}
+% % % % % % %% \bibliographystyle{plain}
+% % % % % % %% \bibliography{gregsonpapers} 
+%  \begin{thebibliography}{1}
 
 
-
- \end{thebibliography}
+%  \end{thebibliography}
 
 \vspace{0.2cm}
 \renewcommand{\refname}{Publications---Research Papers---Peer Reviewed ({\smaller Submitted})}
@@ -614,9 +674,7 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 \begin{thebibliography}{1}
   \bibitem[1]{} \textbf{Gregson AL}, Hoji A, Poynter S, Briones C, Belperio J. Multiparameter Flow Cytometric Characterization of Bronchoalveolar Lavage Lymphocytes for Investigating Post-Lung Transplant Alloimmune Mechanisms. {\color{BrickRed}\textit{Journal of Visualized Experiments}}
 
-  \bibitem[2]{} Hemarajata P, Amick T, Yang S, \textbf{Gregson AL}, Holzmeyer C, Bush K, Humphries RM. Selection of Hyperproduction of SME-1 and AmpC in a Carbapenem-Resistant \textit{Serratia marcescens} During Antibiotic Therapy.
-
-  \bibitme[3]{} Palchevskiy V, Xue YY, Kern R, Weigt SS, Gregson AL, Song SX, Fishbein MC, Hogaboam CM, Sayah DM, Lynch JP III, Keane MP, Brooks DG, Belperio JA. CCR4 Expression on T cells is Required for Alloreactive Responses. 
+  \bibitem[2]{} Palchevskiy V, Xue YY, Kern R, Weigt SS, Gregson AL, Song SX, Fishbein MC, Hogaboam CM, Sayah DM, Lynch JP III, Keane MP, Brooks DG, Belperio JA. CCR4 Expression on T cells is Required for Alloreactive Responses. 
 
 \end{thebibliography}
 
@@ -640,6 +698,7 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
  \bibitem[2]{} Pegues DA, Kubak BM, Maree CL, \textbf{Gregson AL}. Infections in Kidney Transplantation. In: {\color{BrickRed}\textit{Handbook of Kidney Transplantation}}, Fifth edition, Danovitch GM (ed.), Lippincott Williams \& Wilkins, Philadelphia, \textbf{2010}, p251--79. 
 
  \bibitem[3]{} \textbf{Gregson AL}, Mackowiak PA. Pathogenesis of Fever. In: {\color{BrickRed}\textit{Infectious Diseases}}, Third Edition, Cohen J, Powderly WG (ed.), Elsevier Limited, Philadelphia, \textbf{2010}, p673--678.
+   \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12937268309899859817}{{\smaller Google Scholar Cites: 4}}
 
 \end{thebibliography} 
 
@@ -656,14 +715,15 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 \begin{thebibliography}{1}
     \bibitem[1]{} \textbf{Gregson AL}, Edelman RA. Dengue Virus Infections. \href{http://www.pidj.com/pt/re/pidj/fulltext.00006454-200302000-00016.htm;jsessionid=LjQLjRWvhhWG6Z2qYk6ncLbp91GYv5QvnTSLCYMnTb2QX7QFcDWJ!-1646499982!181195629!8091!-1?index=1&database=ppvovft&results=1&count=10&searchid=1&nav=search}{\textcolor{BrickRed}{\textit{Pediatric Infectious Disease Journal}} \textbf{2003} Feb; 22(2):179--181}. 
       {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?search=PEDIATRIC+INFECTIOUS+DISEASE+JOURNAL&search2=&search3=&searchby=journal}{{\smaller EFn: 2.9 AI 1.1}} 
-        \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=PEDIATR+INFECT+DIS+J}{{\smaller JIF: 2.723}}~ 
+        \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=PEDIATR+INFECT+DIS+J}{{\smaller JIF: 2.723}}~
+        \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=38617972414291687}{{\smaller Google Scholar Cites: 28}}
         \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-0037323526&origin=resultslist&sort=plf-f&src=s&nlo=1&nlr=20&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a3832&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=27&citeCnt=12&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 12}}
           }
 
     \bibitem[2]{} \textbf{Gregson AL}, Edelman RA. Does Antigen Overload Exist? \textcolor{BrickRed}{\textit{Immunology Allergy Clinics of North America}} Vaccines in the 21st Century, \textbf{2003} Nov; 23(3):649--664. 
       {\color{NavyBlue}\href{http://www.eigenfactor.org/rankings.php?search=IMMUNOLOGY+AND+ALLERGY+CLINICS+OF+NORTH+AMERICA&search2=&search3=&searchby=journal}{{\smaller EFn: 0.3 AI 0.8}} 
         \href{http://admin-apps.isiknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=IMMUNOL+ALLERGY+CLIN}{{\smaller JIF: 1.818}}~ 
-        \href{http://scholar.google.com/scholar?cites=1214620629646634848&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 20}}~
+        \href{http://scholar.google.com/scholar?cites=1214620629646634848&as_sdt=2005&sciodt=0,5&hl=en}{{\smaller Google Scholar Cites: 30}}~
         \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-0346733042&origin=resultslist&sort=plf-f&src=s&nlo=1&nlr=20&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a3382&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=26&citeCnt=15&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 15}}
           }
 
@@ -671,13 +731,15 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 
   \bibitem[4]{} Weigt SS, \textbf{Gregson AL}, Deng JC, Lynch JP, Belperio JA. Respiratory Viral Infections in Hematopoietic Stem Cell and Solid Organ Transplant Recipients. {\color{BrickRed}\textit{Seminars in Respiratory and Critical Care Medicine}} \textbf{2011} Aug; 32(4):471--93. \href{http://dx.doi.org/10.1055/s-0031-1283286}{\nolinkurl{10.1055/s-0031-1283286}} {\smaller PMC4209842}~ 
     {\color{NavyBlue} \href{http://www.eigenfactor.org/rankings.php?search=SEMINARS+IN+RESPIRATORY+AND+CRITICAL+CARE+MEDICINE&search2=&search3=&searchby=journal}{{\smaller EFn: 0.5 AI: 0.8 JIF: 2.712}}~
+      \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3216870740609080793}{{\smaller Google Scholar Cites: 58}}
       \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-80051960857&origin=resultslist&sort=plf-f&src=s&nlo=1&nlr=20&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a3832&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=10&citeCnt=21&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 21}}
       }
 
   \bibitem[5]{} McKinnell JA, Cannella AP, Injean P, \textbf{Gregson AL}. Adjunctive Glucocorticoid Therapy for Non-{\smaller HIV} related Pneumocystis carinii Pneumonia ({\smaller NH-PCP}).
 {\color{BrickRed}\textit{American Journal of Transplantation}} \textbf{2014} Mar; 14:982--983. \href{http://dx.doi.org/10.1111/ajt.12655}{\nolinkurl{10.1111/ajt.12655}} {\smaller PMC4167736}~
        {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=AMERICAN+JOURNAL+OF+TRANSPLANTATION&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 5.9 AI: 2.0}} 
-       \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
+         \href{http://admin-apps.webofknowledge.com/JCR/JCR?RQ=RECORD&rank=1&journal=AM+J+TRANSPLANT}{{\smaller JIF: 5.683}}~
+         \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7402623303252789264}{{\smaller Google Scholar Cites: 7}}
        \href{http://www.scopus.com/record/display.uri?eid=2-s2.0-84897116000&origin=resultslist&sort=plf-f&src=s&st1=&st2=&nlo=1&nlr=20&nls=&sid=4E3F003C86CD3B740CA1877B02032D8B.y7ESLndDIsN8cE7qwvy6w%3a2832&sot=anl&sdt=aut&sl=36&s=AU-ID%28%22Gregson%2c+Aric+L.%22+6603096521%29&relpos=4&citeCnt=2&searchTerm=AU-ID%28%5C%26quot%3BGregson%2C+Aric+L.%5C%26quot%3B+6603096521%29}{{\smaller Scopus Cites: 2}}
        }
 
@@ -686,7 +748,8 @@ Applied Sciences, California Technical Institute}{Pasadena, CA}{}{}{}
 
   \bibitem[7]{} \textbf{Gregson AL}. Infectious Triggers of Chronic Lung Allograft Dysfunction. {\color{BrickRed}\textit{Current Infectious Disease Reports}} \textbf{2016} Jun; 18(7). \href{}{\nolinkurl{10.1007/s11908-016-0529-6}}
 {\color{NavyBlue}\href{http://52.6.43.8/projects/journalRank/rankings.php?bsearch=Current+Infectious+Disease+Reports&searchby=journal&orderby=eigenfactor}{{\smaller EFn: 0.4  AI: 1.4}}
-       {\smaller JIF: 1.677}~
+  {\smaller JIF: 1.677}~
+  \href{https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11018486565467933930}{{\smaller Google Scholar Cites: 4}}
        }
 
 
